@@ -1,4 +1,4 @@
-module pipelined_multiplier_2stage_low_latency#(
+module pipelined_multiplier_2stage#(
   parameter INPUT_WIDTH = 18
 )(
   input                   i_clk,
