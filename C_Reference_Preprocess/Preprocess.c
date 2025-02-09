@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 
-// BMP 헤더 구조체 (코드1)
+// BMP header structures (Code 1)
 #pragma pack(push, 1)
 typedef struct {
     uint16_t bfType;
@@ -28,7 +28,7 @@ typedef struct {
 } DIBHeader;
 #pragma pack(pop)
 
-// BMP 파일 읽기 (코드1)
+// Load BMP file (Code 1)
 uint8_t* loadBMP(const char *filename, int *width, int *height) {
     FILE *fp = fopen(filename, "rb");
     if (!fp) {
@@ -50,10 +50,29 @@ uint8_t* loadBMP(const char *filename, int *width, int *height) {
 
     *width = dibHeader.biWidth;
     *height = (dibHeader.biHeight > 0) ? dibHeader.biHeight : -dibHeader.biHeight;
+    /*
+    In the DIB header of a BMP file, the biHeight field represents the image height.
+    The sign of this value indicates the order in which the image data is stored.
+
+    If positive: the image data is stored in a bottom-up order (i.e., the first row in the file is the bottom row, and the last is the top).
+    If negative: the image data is stored in a top-down order (i.e., the first row in the file is the top row, and the last is the bottom).
+    However, what we need is the number of rows (the absolute height), so if biHeight is negative, we use its absolute value (-biHeight).
+    */
 
     fseek(fp, bmpHeader.bfOffBits, SEEK_SET);
+    /*
+    This sets the file pointer to the position starting from the beginning (SEEK_SET)
+    offset by bmpHeader.bfOffBits bytes.
+    bmpHeader.bfOffBits indicates where the actual pixel data (excluding headers) begins.
+    */
 
     int row_padded = ((*width * 3 + 3) / 4) * 4;
+    /*
+    The BMP file format requires that each row's byte count is a multiple of 4.
+    For example, in a 24-bit BMP image each pixel occupies 3 bytes.
+    If the image width is 5 pixels, the actual data is 5 × 3 = 15 bytes.
+    Since 15 is not a multiple of 4, the row is padded to 16 bytes (the nearest multiple of 4).
+    */
     int dataSize = row_padded * (*height);
     uint8_t *data = (uint8_t*)malloc(dataSize);
 
@@ -66,9 +85,19 @@ uint8_t* loadBMP(const char *filename, int *width, int *height) {
     fread(data, 1, dataSize, fp);
     fclose(fp);
     return data;
+    /* Example: 24-bit BMP image (width 3 pixels, height 1 pixel)
+       Pixel 0: B=10, G=20, R=30
+       Pixel 1: B=40, G=50, R=60
+       Pixel 2: B=70, G=80, R=90
+       Padding: 0, 0, 0
+
+       The data is stored in memory as:
+       [10, 20, 30, 40, 50, 60, 70, 80, 90, 0, 0, 0]
+       after allocating uint8_t *data = (uint8_t*)malloc(dataSize) and reading from the file.
+    */
 }
 
-// BGR → YCbCr 변환 (코드1)
+// Convert BGR to YCbCr (Code 1)
 float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
     float *ycbcr = (float*)malloc(width * height * 3 * sizeof(float));
     if (!ycbcr) {
@@ -78,11 +107,14 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
 
     int row_padded = ((width * 3 + 3) / 4) * 4;
 
-    // BMP 파일은 bottom-up 순서이므로, 행 순서를 뒤집어 처리
+    // Since BMP files are stored in bottom-up order, process the rows in reverse
     for (int i = 0; i < height; i++) {
         int bmp_row = height - 1 - i;
         for (int j = 0; j < width; j++) {
             int index_bgr = bmp_row * row_padded + j * 3;
+            /* bmp_row * row_padded represents the byte offset where the row begins in the file.
+               j * 3 is the byte offset for the j-th pixel in that row (each pixel occupies 3 bytes).
+            */
             uint8_t b = bgrData[index_bgr + 0];
             uint8_t g = bgrData[index_bgr + 1];
             uint8_t r = bgrData[index_bgr + 2];
@@ -91,7 +123,7 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
             float gf = (float)g;
             float bf = (float)b;
 
-            // YCbCr 변환 공식 (코드1)
+            // YCbCr conversion formula (Code 1)
             float Y  = 16.0f  + (64.738f  * rf + 129.057f * gf + 25.064f  * bf) / 256.0f;
             float Cb = 128.0f + (-37.945f * rf - 74.494f  * gf + 112.439f * bf) / 256.0f;
             float Cr = 128.0f + (112.439f * rf - 94.154f  * gf - 18.285f  * bf) / 256.0f;
@@ -106,7 +138,7 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
     return ycbcr;
 }
 
-// YCbCr 데이터를 TXT 파일로 저장 (코드1)
+// Save YCbCr data to a TXT file (Code 1)
 int saveYCbCrToTxt(const char *filename, const float *ycbcrData, int width, int height) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
@@ -114,7 +146,7 @@ int saveYCbCrToTxt(const char *filename, const float *ycbcrData, int width, int 
         return -1;
     }
 
-    // 소수점 6자리로 출력하도록 수정 (%.6f)
+    // Modify to print with 6 decimal places (%.6f)
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             int idx = (i * width + j) * 3;
@@ -126,7 +158,7 @@ int saveYCbCrToTxt(const char *filename, const float *ycbcrData, int width, int 
     return 0;
 }
 
-// x (Y 채널) 데이터를 TXT 파일로 저장하는 함수
+// Function to save x (Y channel) data to a TXT file
 int saveXToTxt(const char *filename, const float *x, int width, int height) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
@@ -134,7 +166,7 @@ int saveXToTxt(const char *filename, const float *x, int width, int height) {
         return -1;
     }
 
-    // 소수점 6자리로 출력 (%.6f)
+    // Print with 6 decimal places (%.6f)
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             int idx = i * width + j;
@@ -147,12 +179,12 @@ int saveXToTxt(const char *filename, const float *x, int width, int height) {
 }
 
 /*
-    preprocess 함수 (Python의 preprocess와 유사한 기능)
-    - BMP 파일을 읽어 BGR 데이터를 가져옴
-    - BGR 데이터를 YCbCr로 변환
-    - Y 채널만 추출하여 0~1 범위로 정규화한 배열 x를 생성
-    - YCbCr 데이터와 x 데이터를 각각 TXT 파일로 저장 (검증용)
-    - x 데이터를 반환함
+    The preprocess function (similar to the Python preprocess)
+    - Reads the BMP file to obtain BGR data.
+    - Converts the BGR data to YCbCr.
+    - Extracts only the Y channel and normalizes it to a range of 0 to 1, creating the array x.
+    - Saves both the YCbCr data and x data into separate TXT files (for verification).
+    - Returns the x data.
 */
 float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, int *width, int *height) {
     uint8_t *bgrData = loadBMP(inputBmp, width, height);
@@ -167,7 +199,8 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
         return NULL;
     }
 
-    // Y 채널(x)만 추출하여 0~1 범위로 정규화 (Y 값은 ycbcrData의 매 픽셀 3개 중 첫 번째 요소)
+    // Extract only the Y channel (x) and normalize it to a range of 0 to 1
+    // (The Y value is the first of the three values for each pixel in ycbcrData)
     float *x = (float*)malloc((*width) * (*height) * sizeof(float));
     if (!x) {
         fprintf(stderr, "메모리 할당 실패 (x 배열)\n");
@@ -178,27 +211,27 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
         x[i] = ycbcrData[i * 3] / 255.0f;
     }
 
-    // YCbCr 데이터를 TXT 파일로 저장하여 검증
+    // Save YCbCr data to a TXT file for verification
     if (saveYCbCrToTxt(ycbcrTxt, ycbcrData, *width, *height) == 0) {
         printf("YCbCr 데이터가 '%s'에 저장되었습니다.\n", ycbcrTxt);
     } else {
         fprintf(stderr, "YCbCr 데이터 저장 실패\n");
     }
 
-    // x 데이터를 TXT 파일로 저장
+    // Save x data to a TXT file
     if (saveXToTxt(xTxt, x, *width, *height) == 0) {
         printf("정규화된 Y 채널(x) 데이터가 '%s'에 저장되었습니다.\n", xTxt);
     } else {
         fprintf(stderr, "x 데이터 저장 실패\n");
     }
 
-    // ycbcrData는 메모리 누수를 막기 위해 해제합니다.
+    // Free ycbcrData to prevent memory leaks.
     free(ycbcrData);
 
-    return x; // 호출한 쪽에서 반환받은 x를 사용 후 free() 처리 필요
+    return x; // The caller is responsible for freeing the returned x after use.
 }
 
-// 메인 함수: 인자로 입력 BMP 파일, YCbCr 출력 TXT 파일, x 출력 TXT 파일 이름을 받을 수 있도록 함
+// Main function: allows specifying the input BMP file, output TXT file for YCbCr, and output TXT file for x as command line arguments
 int main(int argc, char *argv[]) {
     const char *inputBmp = (argc > 1) ? argv[1] : "input.bmp";
     const char *ycbcrTxt = (argc > 2) ? argv[2] : "ycbcr_output.txt";
@@ -210,8 +243,8 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // x 데이터를 활용하는 추가 연산을 수행할 수 있음.
-    // 예를 들어, x 데이터를 확인하기 위해 몇몇 값을 출력합니다.
+    // Additional operations using the x data can be performed here.
+    // For example, printing some values to inspect the x data.
     printf("x 채널의 일부 값:\n");
     for (int i = 0; i < 10 && i < width * height; i++) {
         printf("%.6f ", x[i]);
