@@ -1,0 +1,19 @@
+BMPHeader:
+bfType: 0x4D42
+bfSize: 196730
+bfReserved1: 0
+bfReserved2: 0
+bfOffBits: 122
+
+DIBHeader:
+biSize: 108
+biWidth: 256
+biHeight: 256
+biPlanes: 1
+biBitCount: 24
+biCompression: 0
+biSizeImage: 196608
+biXPelsPerMeter: 3780
+biYPelsPerMeter: 3780
+biClrUsed: 0
+biClrImportant: 0

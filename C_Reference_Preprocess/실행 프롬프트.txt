@@ -1,1 +1,0 @@
-.\Preprocess.exe input.bmp ycbcr_output.txt x_output.txt

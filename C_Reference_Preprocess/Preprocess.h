@@ -1,3 +1,6 @@
+#ifndef PREPROCESS_H
+#define PREPROCESS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -28,8 +31,58 @@ typedef struct {
 } DIBHeader;
 #pragma pack(pop)
 
+// Save BMP header data to a TXT file (추가 기능)
+int saveBMPHeaderToTxt(const char *filename, const BMPHeader *bmpHeader, const DIBHeader *dibHeader) {
+    FILE *fp = fopen(filename, "w");
+    if (!fp) {
+        fprintf(stderr, "출력 파일 열기 실패: %s\n", filename);
+        return -1;
+    }
+    fprintf(fp, "BMPHeader:\n");
+    fprintf(fp, "bfType: 0x%X\n", bmpHeader->bfType);
+    fprintf(fp, "bfSize: %u\n", bmpHeader->bfSize);
+    fprintf(fp, "bfReserved1: %u\n", bmpHeader->bfReserved1);
+    fprintf(fp, "bfReserved2: %u\n", bmpHeader->bfReserved2);
+    fprintf(fp, "bfOffBits: %u\n", bmpHeader->bfOffBits);
+
+    fprintf(fp, "\nDIBHeader:\n");
+    fprintf(fp, "biSize: %u\n", dibHeader->biSize);
+    fprintf(fp, "biWidth: %d\n", dibHeader->biWidth);
+    fprintf(fp, "biHeight: %d\n", dibHeader->biHeight);
+    fprintf(fp, "biPlanes: %u\n", dibHeader->biPlanes);
+    fprintf(fp, "biBitCount: %u\n", dibHeader->biBitCount);
+    fprintf(fp, "biCompression: %u\n", dibHeader->biCompression);
+    fprintf(fp, "biSizeImage: %u\n", dibHeader->biSizeImage);
+    fprintf(fp, "biXPelsPerMeter: %d\n", dibHeader->biXPelsPerMeter);
+    fprintf(fp, "biYPelsPerMeter: %d\n", dibHeader->biYPelsPerMeter);
+    fprintf(fp, "biClrUsed: %u\n", dibHeader->biClrUsed);
+    fprintf(fp, "biClrImportant: %u\n", dibHeader->biClrImportant);
+
+    fclose(fp);
+    return 0;
+}
+
+// Save pixel data to a TXT file (추가 기능)
+// 수정: 행과 픽셀 인덱스 정보를 출력하지 않고, 각 픽셀의 B, G, R 값만 출력합니다.
+int savePixelDataToTxt(const char *filename, const uint8_t *pixelData, int row_padded, int width, int height) {
+    FILE *fp = fopen(filename, "w");
+    if (!fp) {
+        fprintf(stderr, "출력 파일 열기 실패: %s\n", filename);
+        return -1;
+    }
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            int idx = i * row_padded + j * 3;
+            fprintf(fp, "B=%u, G=%u, R=%u\n", pixelData[idx], pixelData[idx + 1], pixelData[idx + 2]);
+        }
+    }
+    fclose(fp);
+    return 0;
+}
+
 // Load BMP file (Code 1)
-uint8_t* loadBMP(const char *filename, int *width, int *height) {
+// loadBMP 함수를 확장하여 header 정보를 출력하는 매개변수를 추가함
+uint8_t* loadBMP(const char *filename, int *width, int *height, BMPHeader *bmpHeaderOut, DIBHeader *dibHeaderOut) {
     FILE *fp = fopen(filename, "rb");
     if (!fp) {
         fprintf(stderr, "파일 열기 실패: %s\n", filename);
@@ -47,6 +100,10 @@ uint8_t* loadBMP(const char *filename, int *width, int *height) {
         fclose(fp);
         return NULL;
     }
+    
+    // header 정보를 출력 매개변수에 저장 (추가 기능)
+    if (bmpHeaderOut) *bmpHeaderOut = bmpHeader;
+    if (dibHeaderOut) *dibHeaderOut = dibHeader;
 
     *width = dibHeader.biWidth;
     *height = (dibHeader.biHeight > 0) ? dibHeader.biHeight : -dibHeader.biHeight;
@@ -184,14 +241,32 @@ int saveXToTxt(const char *filename, const float *x, int width, int height) {
     - Converts the BGR data to YCbCr.
     - Extracts only the Y channel and normalizes it to a range of 0 to 1, creating the array x.
     - Saves both the YCbCr data and x data into separate TXT files (for verification).
+    - Additionally, saves the BMP header and pixel data to TXT files as intermediate outputs.
     - Returns the x data.
 */
-float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, int *width, int *height) {
-    uint8_t *bgrData = loadBMP(inputBmp, width, height);
+float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, const char *headerTxt, const char *pixelDataTxt, int *width, int *height) {
+    BMPHeader bmpHeader;
+    DIBHeader dibHeader;
+    uint8_t *bgrData = loadBMP(inputBmp, width, height, &bmpHeader, &dibHeader);
     if (!bgrData) {
         return NULL;
     }
     printf("이미지 크기: %d x %d\n", *width, *height);
+
+    // Save BMP header data to a TXT file (추가 기능)
+    if (saveBMPHeaderToTxt(headerTxt, &bmpHeader, &dibHeader) == 0) {
+        printf("BMP header 데이터가 '%s'에 저장되었습니다.\n", headerTxt);
+    } else {
+        fprintf(stderr, "BMP header 데이터 저장 실패\n");
+    }
+
+    int row_padded = ((*width * 3 + 3) / 4) * 4;
+    // Save pixel data to a TXT file (추가 기능)
+    if (savePixelDataToTxt(pixelDataTxt, bgrData, row_padded, *width, *height) == 0) {
+        printf("Pixel 데이터가 '%s'에 저장되었습니다.\n", pixelDataTxt);
+    } else {
+        fprintf(stderr, "Pixel 데이터 저장 실패\n");
+    }
 
     float *ycbcrData = convertBGRtoYCbCr(bgrData, *width, *height);
     free(bgrData);
@@ -231,26 +306,4 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
     return x; // The caller is responsible for freeing the returned x after use.
 }
 
-// Main function: allows specifying the input BMP file, output TXT file for YCbCr, and output TXT file for x as command line arguments
-int main(int argc, char *argv[]) {
-    const char *inputBmp = (argc > 1) ? argv[1] : "input.bmp";
-    const char *ycbcrTxt = (argc > 2) ? argv[2] : "ycbcr_output.txt";
-    const char *xTxt     = (argc > 3) ? argv[3] : "x_output.txt";
-
-    int width, height;
-    float *x = preprocess(inputBmp, ycbcrTxt, xTxt, &width, &height);
-    if (!x) {
-        return 1;
-    }
-
-    // Additional operations using the x data can be performed here.
-    // For example, printing some values to inspect the x data.
-    printf("x 채널의 일부 값:\n");
-    for (int i = 0; i < 10 && i < width * height; i++) {
-        printf("%.6f ", x[i]);
-    }
-    printf("\n");
-
-    free(x);
-    return 0;
-}
+#endif // PREPROCESS_H
