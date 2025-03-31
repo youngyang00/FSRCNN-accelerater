@@ -20,11 +20,11 @@ int main(int argc, char *argv[]) {
     const char *inputBmp   = (argc > 1) ? argv[1] : "input.bmp";
     const char *ycbcrTxt   = (argc > 2) ? argv[2] : "results/ycbcr_output.txt";
     const char *xTxt       = (argc > 3) ? argv[3] : "results/x_output.txt";
-    const char *headerTxt  = (argc > 4) ? argv[4] : "results/bmp_header.txt";
+    const char *headerBin  = (argc > 4) ? argv[4] : "results/bmp_header.bin";
     const char *pixelTxt   = (argc > 5) ? argv[5] : "results/pixel_data.txt";
 
     int width, height;
-    float *x = preprocess(inputBmp, ycbcrTxt, xTxt, headerTxt, pixelTxt, &width, &height);
+    float *x = preprocess(inputBmp, ycbcrTxt, xTxt, headerBin, pixelTxt, &width, &height);
     if (!x) {
         return 1;
     }

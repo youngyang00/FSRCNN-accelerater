@@ -31,39 +31,22 @@ typedef struct {
 } DIBHeader;
 #pragma pack(pop)
 
-// Save BMP header data to a TXT file (추가 기능)
-int saveBMPHeaderToTxt(const char *filename, const BMPHeader *bmpHeader, const DIBHeader *dibHeader) {
-    FILE *fp = fopen(filename, "w");
+// Save BMP header data to a binary file
+// 헤더 정보를 바이너리 형식으로 저장하여, 이후 BMP 파일 복원에 사용할 수 있습니다.
+int saveBMPHeaderBinary(const char *filename, const BMPHeader *bmpHeader, const DIBHeader *dibHeader) {
+    FILE *fp = fopen(filename, "wb");
     if (!fp) {
-        fprintf(stderr, "출력 파일 열기 실패: %s\n", filename);
+        fprintf(stderr, "바이너리 출력 파일 열기 실패: %s\n", filename);
         return -1;
     }
-    fprintf(fp, "BMPHeader:\n");
-    fprintf(fp, "bfType: 0x%X\n", bmpHeader->bfType);
-    fprintf(fp, "bfSize: %u\n", bmpHeader->bfSize);
-    fprintf(fp, "bfReserved1: %u\n", bmpHeader->bfReserved1);
-    fprintf(fp, "bfReserved2: %u\n", bmpHeader->bfReserved2);
-    fprintf(fp, "bfOffBits: %u\n", bmpHeader->bfOffBits);
-
-    fprintf(fp, "\nDIBHeader:\n");
-    fprintf(fp, "biSize: %u\n", dibHeader->biSize);
-    fprintf(fp, "biWidth: %d\n", dibHeader->biWidth);
-    fprintf(fp, "biHeight: %d\n", dibHeader->biHeight);
-    fprintf(fp, "biPlanes: %u\n", dibHeader->biPlanes);
-    fprintf(fp, "biBitCount: %u\n", dibHeader->biBitCount);
-    fprintf(fp, "biCompression: %u\n", dibHeader->biCompression);
-    fprintf(fp, "biSizeImage: %u\n", dibHeader->biSizeImage);
-    fprintf(fp, "biXPelsPerMeter: %d\n", dibHeader->biXPelsPerMeter);
-    fprintf(fp, "biYPelsPerMeter: %d\n", dibHeader->biYPelsPerMeter);
-    fprintf(fp, "biClrUsed: %u\n", dibHeader->biClrUsed);
-    fprintf(fp, "biClrImportant: %u\n", dibHeader->biClrImportant);
-
+    fwrite(bmpHeader, sizeof(BMPHeader), 1, fp);
+    fwrite(dibHeader, sizeof(DIBHeader), 1, fp);
     fclose(fp);
     return 0;
 }
 
-// Save pixel data to a TXT file (추가 기능)
-// 수정: 행과 픽셀 인덱스 정보를 출력하지 않고, 각 픽셀의 B, G, R 값만 출력합니다.
+// Save pixel data to a TXT file
+// 각 픽셀의 B, G, R 값만 "B=값, G=값, R=값" 형식으로 한 줄씩 저장합니다.
 int savePixelDataToTxt(const char *filename, const uint8_t *pixelData, int row_padded, int width, int height) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
@@ -81,7 +64,7 @@ int savePixelDataToTxt(const char *filename, const uint8_t *pixelData, int row_p
 }
 
 // Load BMP file (Code 1)
-// loadBMP 함수를 확장하여 header 정보를 출력하는 매개변수를 추가함
+// header 정보를 출력 매개변수로 전달합니다.
 uint8_t* loadBMP(const char *filename, int *width, int *height, BMPHeader *bmpHeaderOut, DIBHeader *dibHeaderOut) {
     FILE *fp = fopen(filename, "rb");
     if (!fp) {
@@ -101,57 +84,24 @@ uint8_t* loadBMP(const char *filename, int *width, int *height, BMPHeader *bmpHe
         return NULL;
     }
     
-    // header 정보를 출력 매개변수에 저장 (추가 기능)
     if (bmpHeaderOut) *bmpHeaderOut = bmpHeader;
     if (dibHeaderOut) *dibHeaderOut = dibHeader;
 
     *width = dibHeader.biWidth;
     *height = (dibHeader.biHeight > 0) ? dibHeader.biHeight : -dibHeader.biHeight;
-    /*
-    In the DIB header of a BMP file, the biHeight field represents the image height.
-    The sign of this value indicates the order in which the image data is stored.
-
-    If positive: the image data is stored in a bottom-up order (i.e., the first row in the file is the bottom row, and the last is the top).
-    If negative: the image data is stored in a top-down order (i.e., the first row in the file is the top row, and the last is the bottom).
-    However, what we need is the number of rows (the absolute height), so if biHeight is negative, we use its absolute value (-biHeight).
-    */
 
     fseek(fp, bmpHeader.bfOffBits, SEEK_SET);
-    /*
-    This sets the file pointer to the position starting from the beginning (SEEK_SET)
-    offset by bmpHeader.bfOffBits bytes.
-    bmpHeader.bfOffBits indicates where the actual pixel data (excluding headers) begins.
-    */
-
     int row_padded = ((*width * 3 + 3) / 4) * 4;
-    /*
-    The BMP file format requires that each row's byte count is a multiple of 4.
-    For example, in a 24-bit BMP image each pixel occupies 3 bytes.
-    If the image width is 5 pixels, the actual data is 5 × 3 = 15 bytes.
-    Since 15 is not a multiple of 4, the row is padded to 16 bytes (the nearest multiple of 4).
-    */
     int dataSize = row_padded * (*height);
     uint8_t *data = (uint8_t*)malloc(dataSize);
-
     if (!data) {
         fprintf(stderr, "메모리 할당 실패\n");
         fclose(fp);
         return NULL;
     }
-
     fread(data, 1, dataSize, fp);
     fclose(fp);
     return data;
-    /* Example: 24-bit BMP image (width 3 pixels, height 1 pixel)
-       Pixel 0: B=10, G=20, R=30
-       Pixel 1: B=40, G=50, R=60
-       Pixel 2: B=70, G=80, R=90
-       Padding: 0, 0, 0
-
-       The data is stored in memory as:
-       [10, 20, 30, 40, 50, 60, 70, 80, 90, 0, 0, 0]
-       after allocating uint8_t *data = (uint8_t*)malloc(dataSize) and reading from the file.
-    */
 }
 
 // Convert BGR to YCbCr (Code 1)
@@ -163,15 +113,11 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
     }
 
     int row_padded = ((width * 3 + 3) / 4) * 4;
-
-    // Since BMP files are stored in bottom-up order, process the rows in reverse
+    // BMP 파일은 bottom-up 방식이므로 역순으로 처리합니다.
     for (int i = 0; i < height; i++) {
         int bmp_row = height - 1 - i;
         for (int j = 0; j < width; j++) {
             int index_bgr = bmp_row * row_padded + j * 3;
-            /* bmp_row * row_padded represents the byte offset where the row begins in the file.
-               j * 3 is the byte offset for the j-th pixel in that row (each pixel occupies 3 bytes).
-            */
             uint8_t b = bgrData[index_bgr + 0];
             uint8_t g = bgrData[index_bgr + 1];
             uint8_t r = bgrData[index_bgr + 2];
@@ -180,7 +126,6 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
             float gf = (float)g;
             float bf = (float)b;
 
-            // YCbCr conversion formula (Code 1)
             float Y  = 16.0f  + (64.738f  * rf + 129.057f * gf + 25.064f  * bf) / 256.0f;
             float Cb = 128.0f + (-37.945f * rf - 74.494f  * gf + 112.439f * bf) / 256.0f;
             float Cr = 128.0f + (112.439f * rf - 94.154f  * gf - 18.285f  * bf) / 256.0f;
@@ -191,7 +136,6 @@ float* convertBGRtoYCbCr(const uint8_t *bgrData, int width, int height) {
             ycbcr[idx + 2] = Cr;
         }
     }
-
     return ycbcr;
 }
 
@@ -202,35 +146,29 @@ int saveYCbCrToTxt(const char *filename, const float *ycbcrData, int width, int 
         fprintf(stderr, "출력 파일 열기 실패: %s\n", filename);
         return -1;
     }
-
-    // Modify to print with 6 decimal places (%.6f)
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             int idx = (i * width + j) * 3;
             fprintf(fp, "%.6f %.6f %.6f\n", ycbcrData[idx], ycbcrData[idx + 1], ycbcrData[idx + 2]);
         }
     }
-
     fclose(fp);
     return 0;
 }
 
-// Function to save x (Y channel) data to a TXT file
+// Save x (Y channel) data to a TXT file
 int saveXToTxt(const char *filename, const float *x, int width, int height) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
         fprintf(stderr, "출력 파일 열기 실패 (x): %s\n", filename);
         return -1;
     }
-
-    // Print with 6 decimal places (%.6f)
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             int idx = i * width + j;
             fprintf(fp, "%.6f\n", x[idx]);
         }
     }
-
     fclose(fp);
     return 0;
 }
@@ -241,10 +179,10 @@ int saveXToTxt(const char *filename, const float *x, int width, int height) {
     - Converts the BGR data to YCbCr.
     - Extracts only the Y channel and normalizes it to a range of 0 to 1, creating the array x.
     - Saves both the YCbCr data and x data into separate TXT files (for verification).
-    - Additionally, saves the BMP header and pixel data to TXT files as intermediate outputs.
+    - Additionally, saves the BMP header (in binary form) and pixel data to files as intermediate outputs.
     - Returns the x data.
 */
-float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, const char *headerTxt, const char *pixelDataTxt, int *width, int *height) {
+float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, const char *headerBin, const char *pixelDataTxt, int *width, int *height) {
     BMPHeader bmpHeader;
     DIBHeader dibHeader;
     uint8_t *bgrData = loadBMP(inputBmp, width, height, &bmpHeader, &dibHeader);
@@ -253,15 +191,13 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
     }
     printf("이미지 크기: %d x %d\n", *width, *height);
 
-    // Save BMP header data to a TXT file (추가 기능)
-    if (saveBMPHeaderToTxt(headerTxt, &bmpHeader, &dibHeader) == 0) {
-        printf("BMP header 데이터가 '%s'에 저장되었습니다.\n", headerTxt);
+    if (saveBMPHeaderBinary(headerBin, &bmpHeader, &dibHeader) == 0) {
+        printf("BMP header 바이너리 데이터가 '%s'에 저장되었습니다.\n", headerBin);
     } else {
-        fprintf(stderr, "BMP header 데이터 저장 실패\n");
+        fprintf(stderr, "BMP header 바이너리 데이터 저장 실패\n");
     }
 
     int row_padded = ((*width * 3 + 3) / 4) * 4;
-    // Save pixel data to a TXT file (추가 기능)
     if (savePixelDataToTxt(pixelDataTxt, bgrData, row_padded, *width, *height) == 0) {
         printf("Pixel 데이터가 '%s'에 저장되었습니다.\n", pixelDataTxt);
     } else {
@@ -274,8 +210,6 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
         return NULL;
     }
 
-    // Extract only the Y channel (x) and normalize it to a range of 0 to 1
-    // (The Y value is the first of the three values for each pixel in ycbcrData)
     float *x = (float*)malloc((*width) * (*height) * sizeof(float));
     if (!x) {
         fprintf(stderr, "메모리 할당 실패 (x 배열)\n");
@@ -286,24 +220,20 @@ float* preprocess(const char *inputBmp, const char *ycbcrTxt, const char *xTxt, 
         x[i] = ycbcrData[i * 3] / 255.0f;
     }
 
-    // Save YCbCr data to a TXT file for verification
     if (saveYCbCrToTxt(ycbcrTxt, ycbcrData, *width, *height) == 0) {
         printf("YCbCr 데이터가 '%s'에 저장되었습니다.\n", ycbcrTxt);
     } else {
         fprintf(stderr, "YCbCr 데이터 저장 실패\n");
     }
 
-    // Save x data to a TXT file
     if (saveXToTxt(xTxt, x, *width, *height) == 0) {
         printf("정규화된 Y 채널(x) 데이터가 '%s'에 저장되었습니다.\n", xTxt);
     } else {
         fprintf(stderr, "x 데이터 저장 실패\n");
     }
 
-    // Free ycbcrData to prevent memory leaks.
     free(ycbcrData);
-
-    return x; // The caller is responsible for freeing the returned x after use.
+    return x;
 }
 
 #endif // PREPROCESS_H
