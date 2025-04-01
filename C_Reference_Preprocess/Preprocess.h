@@ -45,23 +45,26 @@ int saveBMPHeaderBinary(const char *filename, const BMPHeader *bmpHeader, const 
     return 0;
 }
 
-// Save pixel data to a TXT file
-// 각 픽셀의 B, G, R 값만 "B=값, G=값, R=값" 형식으로 한 줄씩 저장합니다.
+// Save pixel data to a TXT file (디스플레이 순서로 저장)
 int savePixelDataToTxt(const char *filename, const uint8_t *pixelData, int row_padded, int width, int height) {
     FILE *fp = fopen(filename, "w");
     if (!fp) {
         fprintf(stderr, "출력 파일 열기 실패: %s\n", filename);
         return -1;
     }
-    for (int i = 0; i < height; i++) {
+    // 행을 역순으로 순회하여 top row부터 출력
+    for (int i = height - 1; i >= 0; i--) {
         for (int j = 0; j < width; j++) {
             int idx = i * row_padded + j * 3;
-            fprintf(fp, "B=%u, G=%u, R=%u\n", pixelData[idx], pixelData[idx + 1], pixelData[idx + 2]);
+            // BMP는 픽셀 데이터가 B, G, R 순서로 저장되므로, 출력 시 R, G, B 순서로 변경합니다.
+            fprintf(fp, "(%3u, %3u, %3u) ", pixelData[idx + 2], pixelData[idx + 1], pixelData[idx]);
         }
+        fprintf(fp, "\n");
     }
     fclose(fp);
     return 0;
 }
+
 
 // Load BMP file (Code 1)
 // header 정보를 출력 매개변수로 전달합니다.

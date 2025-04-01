@@ -1,12 +1,9 @@
-BMPHeader:
 bfType: 0x4D42
-bfSize: 196730
+bfSize: 196662
 bfReserved1: 0
 bfReserved2: 0
-bfOffBits: 122
-
-DIBHeader:
-biSize: 108
+bfOffBits: 54
+biSize: 40
 biWidth: 256
 biHeight: 256
 biPlanes: 1
