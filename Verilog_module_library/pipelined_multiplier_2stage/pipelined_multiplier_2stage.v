@@ -4,65 +4,59 @@ module pipelined_multiplier_2stage#(
   input                   i_clk,
   input                   i_reset,
   input                   i_valid,
-  input    [INPUT_WIDTH-1:0]    i_A,
-  input    [INPUT_WIDTH-1:0]    i_B,
-  output   [INPUT_WIDTH*2-1:0]  o_out,
+  input  signed [INPUT_WIDTH-1:0]    i_A,
+  input  signed [INPUT_WIDTH-1:0]    i_B,
+  output signed [INPUT_WIDTH*2-1:0]  o_out,
   output                  o_valid
 );
 
-wire [INPUT_WIDTH/2-1:0] B_lo;
-wire [INPUT_WIDTH/2-1:0] B_hi;
+  localparam HALF = INPUT_WIDTH/2;
 
-reg valid_1;
-reg valid_2;
-reg [INPUT_WIDTH + INPUT_WIDTH/2 - 1 :0] reg_p_lo;
-reg [INPUT_WIDTH + INPUT_WIDTH/2 - 1 :0] reg_p_hi;
-reg [INPUT_WIDTH*2-1:0] p;
+  wire signed [HALF:0] B_lo_ext = {{1{1'b0}}, i_B[HALF-1:0]};  
+  wire signed [HALF-1:0] B_hi    = i_B[INPUT_WIDTH-1:HALF];
 
-assign B_lo = i_B[INPUT_WIDTH/2-1:0];
-assign B_hi = i_B[INPUT_WIDTH-1: INPUT_WIDTH/2];
+  reg valid_1, valid_2;
 
-(* use_dsp = "no" *) 
-wire [INPUT_WIDTH + INPUT_WIDTH/2 - 1 :0] p_lo; 
-(* use_dsp = "no" *) 
-wire [INPUT_WIDTH + INPUT_WIDTH/2 - 1 :0] p_hi;
+  reg signed [INPUT_WIDTH+HALF-1:0] reg_p_lo;
+  reg signed [INPUT_WIDTH+HALF-1:0] reg_p_hi;
 
-// 1st stage of multiplication
 
-assign p_lo = i_A * B_lo;
-assign p_hi = i_A * B_hi;
+  reg signed [INPUT_WIDTH*2-1:0] p;
 
-always @(posedge i_clk) begin
-  valid_1 <= i_valid;
-if (i_reset) begin
-  valid_1 <= 1'd0;
-  reg_p_lo <= 'd0;
-  reg_p_hi <= 'd0;
-end
-else begin
-  if (i_valid) begin
-    reg_p_lo <= p_lo;
-    reg_p_hi <= p_hi;
-  end
-end
-end
 
-//2st stage of multiplication
+  (* use_dsp = "no" *) 
+  wire signed [INPUT_WIDTH+HALF-1:0] p_lo = $signed(i_A) * B_lo_ext;
+  (* use_dsp = "no" *) 
+  wire signed [INPUT_WIDTH+HALF-1:0] p_hi = $signed(i_A) * $signed(B_hi);
 
-always @(posedge i_clk) begin
-  valid_2 <= valid_1;
-  if (i_reset) begin
-    p <= 'd0;
-    valid_2 <= 'd0;
-  end
-  else begin
-    if (valid_1) begin
-      p <= {{(INPUT_WIDTH/2){1'b0}},reg_p_lo} + {reg_p_hi,{(INPUT_WIDTH/2){1'b0}}};
+  always @(posedge i_clk) begin
+    if (i_reset) begin
+      valid_1  <= 1'b0;
+      reg_p_lo <= 'd0;
+      reg_p_hi <= 'd0;
+    end else begin
+      valid_1 <= i_valid;
+      if (i_valid) begin
+        reg_p_lo <= p_lo;
+        reg_p_hi <= p_hi;
+      end
     end
   end
-end
 
-assign o_out = p;
-assign o_valid = valid_2;
+
+  always @(posedge i_clk) begin
+    if (i_reset) begin
+      valid_2 <= 1'b0;
+      p       <= 'd0;
+    end else begin
+      valid_2 <= valid_1;
+      if (valid_1) begin
+        p <= (reg_p_hi <<< HALF) + reg_p_lo;
+      end
+    end
+  end
+
+  assign o_out   = p;
+  assign o_valid = valid_2;
 
 endmodule
