@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../bicubic.srcs/sources_1/new/bicubicWeightRom.v" \
+"../../../../bicubic.srcs/sources_1/new/kernelCalc.v" \
+"../../../../bicubic.srcs/sources_1/new/pipelined_multiplier_2stage.v" \
+"../../../../bicubic.srcs/sim_1/new/tb_Bicubic_compute_unit_burst.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

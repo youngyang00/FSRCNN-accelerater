@@ -1,0 +1,7 @@
+Running: xsim.dir/clamper_behav/xsimk.exe -simmode gui -wdb clamper_behav.wdb -simrunnum 0 -socket 59703
+Design successfully loaded
+Design Loading Memory Usage: 7212 KB (Peak: 7212 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7716 KB (Peak: 7716 KB)
+Simulation CPU Usage: 30 ms

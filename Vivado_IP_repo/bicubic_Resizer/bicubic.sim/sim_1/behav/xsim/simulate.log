@@ -1,0 +1,43 @@
+Time resolution is 1 ps
+[35000] Pass 0: Burst cycle (x,x) sent
+[45000] === BURST START ===
+[45000] Pass 0: Burst cycle (x,x) sent
+[55000] Pass 0: Burst cycle (x,x) sent
+[65000] Pass 0: Burst cycle (x,x) sent
+[75000] Pass 0: Burst cycle (4,x) sent
+[85000] Pass 0: Burst cycle (4,x) sent
+[95000] Pass 0: Burst cycle (4,x) sent
+[105000] Pass 0: Burst cycle (4,x) sent
+[115000] Pass 0: Burst cycle (4,x) sent
+[125000] Pass 0: Burst cycle (4,x) sent
+[135000] Pass 0: Burst cycle (4,x) sent
+[145000] Pass 0: Burst cycle (4,x) sent
+[155000] Pass 0: Burst cycle (4,x) sent
+[165000] Pass 0: Burst cycle (4,x) sent
+[175000] Pass 0: Burst cycle (4,x) sent
+[185000] Pass 0: Burst cycle (4,x) sent
+[195000] Pass 0: Burst end
+[195000] Pass 0: o_valid asserted -> Output pixel R:133 G:148 B:116
+[195000] --- Waiting before next burst ---
+[205000] === BURST STOP  ===
+[305000] Pass 1: Burst cycle (4,4) sent
+[315000] === BURST START ===
+[315000] Pass 1: Burst cycle (4,4) sent
+[325000] Pass 1: Burst cycle (4,4) sent
+[335000] Pass 1: Burst cycle (4,4) sent
+[345000] Pass 1: Burst cycle (4,4) sent
+[355000] Pass 1: Burst cycle (4,4) sent
+[365000] Pass 1: Burst cycle (4,4) sent
+[375000] Pass 1: Burst cycle (4,4) sent
+[385000] Pass 1: Burst cycle (4,4) sent
+[395000] Pass 1: Burst cycle (4,4) sent
+[405000] Pass 1: Burst cycle (4,4) sent
+[415000] Pass 1: Burst cycle (4,4) sent
+[425000] Pass 1: Burst cycle (4,4) sent
+[435000] Pass 1: Burst cycle (4,4) sent
+[445000] Pass 1: Burst cycle (4,4) sent
+[455000] Pass 1: Burst cycle (4,4) sent
+[465000] Pass 1: Burst end
+[465000] Pass 1: o_valid asserted -> Output pixel R:133 G:148 B:116
+[475000] === BURST STOP  ===
+$finish called at time : 565 ns : File "D:/Capstone/bicubic/bicubic.srcs/sim_1/new/tb_Bicubic_compute_unit_burst.v" Line 121

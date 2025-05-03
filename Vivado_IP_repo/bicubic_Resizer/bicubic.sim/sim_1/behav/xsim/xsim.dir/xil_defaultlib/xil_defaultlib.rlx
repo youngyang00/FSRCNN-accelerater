@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+D:/Capstone/bicubic/bicubic.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sim_1/new/tb_Bicubic_compute_unit.v,1746270866,verilog,,,,tb_bicubic_compute_unit,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sim_1/new/tb_Bicubic_compute_unit_burst.v,1746272314,verilog,,,,tb_bicubic_compute_unit_burst,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sim_1/new/tb_kernelCalc.v,1746173547,verilog,,,,tb_kernelCalc,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubicWeightRom.v,1745996754,verilog,,D:/Capstone/bicubic/bicubic.srcs/sources_1/new/kernelCalc.v,,bicubic_rom2d,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sources_1/new/kernelCalc.v,1746254305,verilog,,D:/Capstone/bicubic/bicubic.srcs/sources_1/new/pipelined_multiplier_2stage.v,,bicubic_compute_unit;kernelCalc,,,,,,,,
+D:/Capstone/bicubic/bicubic.srcs/sources_1/new/pipelined_multiplier_2stage.v,1746001133,verilog,,D:/Capstone/bicubic/bicubic.srcs/sim_1/new/tb_Bicubic_compute_unit_burst.v,,pipelined_multiplier_2stage,,,,,,,,
