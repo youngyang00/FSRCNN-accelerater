@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sat May  3 20:43:51 2025
-# Process ID: 22684
+# Start of session at: Sat May 10 18:51:29 2025
+# Process ID: 15464
 # Current directory: D:/Capstone/bicubic/bicubic.runs/synth_1
-# Command line: vivado.exe -log bicubic_compute_unit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bicubic_compute_unit.tcl
-# Log file: D:/Capstone/bicubic/bicubic.runs/synth_1/bicubic_compute_unit.vds
+# Command line: vivado.exe -log BCU_array.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCU_array.tcl
+# Log file: D:/Capstone/bicubic/bicubic.runs/synth_1/BCU_array.vds
 # Journal file: D:/Capstone/bicubic/bicubic.runs/synth_1\vivado.jou
 # Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
 #-----------------------------------------------------------
-source bicubic_compute_unit.tcl -notrace
+source BCU_array.tcl -notrace

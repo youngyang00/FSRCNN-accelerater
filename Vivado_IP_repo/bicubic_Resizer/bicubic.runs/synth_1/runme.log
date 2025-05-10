@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log bicubic_compute_unit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bicubic_compute_unit.tcl
+    with args -log BCU_array.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCU_array.tcl
 
 
 
@@ -9,11 +9,11 @@
   **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source bicubic_compute_unit.tcl -notrace
+source BCU_array.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental D:/Capstone/bicubic/bicubic.srcs/utils_1/imports/synth_1/kernelCalc.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/Capstone/bicubic/bicubic.srcs/utils_1/imports/synth_1/kernelCalc.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top bicubic_compute_unit -part xczu9eg-ffvb1156-2-e
+Command: synth_design -top BCU_array -part xczu9eg-ffvb1156-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
@@ -23,339 +23,54 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20144
+INFO: [Synth 8-7075] Helper process launched with PID 17292
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2378.402 ; gain = 339.016
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2378.867 ; gain = 340.148
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'bicubic_compute_unit' [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubic_compute_unit.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bicubic_rom2d' [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubicWeightRom.v:1]
-INFO: [Synth 8-226] default block is never used [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubicWeightRom.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'bicubic_rom2d' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubicWeightRom.v:1]
-INFO: [Synth 8-6157] synthesizing module 'kernelCalc' [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubic_compute_unit.v:61]
-INFO: [Synth 8-6157] synthesizing module 'pipelined_multiplier_2stage' [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/pipelined_multiplier_2stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BCU_array' [D:/Capstone/bicubic/bicubic.srcs/sources_1/BCU_array.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bicubicComputeUnit' [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubic_compute_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bicubic_rom2d' [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubicWeightRom.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubicWeightRom.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'bicubic_rom2d' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubicWeightRom.v:1]
+INFO: [Synth 8-6157] synthesizing module 'kernelCalc' [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubic_compute_unit.v:76]
+INFO: [Synth 8-6157] synthesizing module 'pipelined_multiplier_2stage' [D:/Capstone/bicubic/bicubic.srcs/sources_1/pipelined_multiplier_2stage.v:1]
 	Parameter INPUT_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pipelined_multiplier_2stage' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/pipelined_multiplier_2stage.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'kernelCalc' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubic_compute_unit.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'bicubic_compute_unit' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/new/bicubic_compute_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipelined_multiplier_2stage' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/pipelined_multiplier_2stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'kernelCalc' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubic_compute_unit.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'bicubicComputeUnit' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/bicubic_compute_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BCU_array' (0#1) [D:/Capstone/bicubic/bicubic.srcs/sources_1/BCU_array.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2469.188 ; gain = 429.801
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2469.770 ; gain = 431.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2487.109 ; gain = 447.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2487.668 ; gain = 448.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2487.109 ; gain = 447.723
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2487.668 ; gain = 448.949
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 2487.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.807 . Memory (MB): peak = 2487.668 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc]
-WARNING: [Vivado 12-661] port or pin 'i_pulp/safe_domain_i/cam_pclk_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:19]
-WARNING: [Vivado 12-661] port or pin 'i_pulp/safe_domain_i/i2s_slave_sck_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:20]
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:24]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports pad_jtag_tck]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:24]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-507] No nets matched 'pad_jtag_tck_IBUF_inst/O'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdi'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:30]
-WARNING: [Vivado 12-646] clock 'tck' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:30]
-CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports pad_jtag_tdi]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:30]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tms'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:31]
-WARNING: [Vivado 12-646] clock 'tck' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:31]
-CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports pad_jtag_tms]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:31]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdo'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:32]
-WARNING: [Vivado 12-646] clock 'tck' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:32]
-CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports pad_jtag_tdo]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:32]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdo'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:34]
-CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [get_ports pad_jtag_tdo]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:34]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tms'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:35]
-CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-from [get_ports pad_jtag_tms]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:35]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdi'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:36]
-CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-from [get_ports pad_jtag_tdi]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:36]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'pad_reset'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:44]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_ports pad_reset]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:44]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-507] No nets matched 'pad_reset_IBUF_inst/O'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_apb_adv_timer/u_tim0/u_in_stage/r_ls_clk_sync_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_apb_adv_timer/u_tim1/u_in_stage/r_ls_clk_sync_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_apb_adv_timer/u_tim2/u_in_stage/r_ls_clk_sync_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_apb_adv_timer/u_tim3/u_in_stage/r_ls_clk_sync_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:52]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:52]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_apb_timer_unit/s_ref_clk*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:53]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_ref_clk_sync/i_pulp_sync/r_reg_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/u_evnt_gen/r_ls_sync_reg*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'i_pulp/cluster_domain_i/cluster_i/cluster_peripherals_i/cluster_timer_wrap_i/timer_unit_i/s_ref_clk*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/safe_domain_i/i_slow_clk_gen/slow_clk_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:61]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins i_pulp/safe_domain_i/i_slow_clk_gen/slow_clk_o]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:61]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/i_clk_rst_gen/clk_per_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:65]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins i_pulp/soc_domain_i/pulp_soc_i/i_clk_rst_gen/clk_per_o]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:65]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/pad_jtag_tck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:68]
-CRITICAL WARNING: [Vivado 12-4739] get_clocks:No valid object(s) found for '--of_objects [get_pins i_pulp/pad_jtag_tck]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:68]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:72]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports FMC_hyper_rwds0]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:72]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fpga_clk_gen/per_clk_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:73]
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/periph_clk_i'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:73]
-CRITICAL WARNING: [Vivado 12-4739] create_generated_clock:No valid object(s) found for '-source [get_pins i_pulp/soc_domain_i/pulp_soc_i/i_clk_rst_gen/i_fpga_clk_gen/per_clk_o]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:73]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/periph_clk_i'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:75]
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/udma_hyperbus_i/ddr_clk/clk0_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:75]
-CRITICAL WARNING: [Vivado 12-4739] create_generated_clock:No valid object(s) found for '-source [get_pins i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/periph_clk_i]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:75]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/periph_clk_i'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:76]
-WARNING: [Vivado 12-508] No pins matched 'i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/udma_hyperbus_i/ddr_clk/clk90_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:76]
-CRITICAL WARNING: [Vivado 12-4739] create_generated_clock:No valid object(s) found for '-source [get_pins i_pulp/soc_domain_i/pulp_soc_i/soc_peripherals_i/i_udma/i_hyper/periph_clk_i]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:76]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:91]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:91]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_ports FMC_hyper_rwds0]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:91]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'rwds_clk'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:93]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:93]
-WARNING: [Vivado 12-627] No clocks matched 'clk_phy'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:93]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:93]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks rwds_clk]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:93]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'clk_phy'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:94]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:94]
-WARNING: [Vivado 12-627] No clocks matched 'rwds_clk'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:94]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:94]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_phy]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:94]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'hyper_ck_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:95]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:95]
-WARNING: [Vivado 12-627] No clocks matched 'clk_phy'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:95]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:95]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks hyper_ck_o]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:95]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-627] No clocks matched 'hyper_ck_o'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:96]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:96]
-WARNING: [Vivado 12-627] No clocks matched 'rwds_clk'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:96]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:96]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks hyper_ck_o]'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:96]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:109]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:109]
-WARNING: [Vivado 12-646] clock 'hyper_ck_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:109]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:110]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:110]
-WARNING: [Vivado 12-646] clock 'hyper_ck_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:110]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:111]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:111]
-WARNING: [Vivado 12-646] clock 'hyper_ck_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:111]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio*'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:112]
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:112]
-WARNING: [Vivado 12-646] clock 'hyper_ck_o' not found. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:112]
-WARNING: [Vivado 12-584] No ports matched 'ref_clk_n'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:134]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:134]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ref_clk_p'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:135]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:135]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_reset'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:141]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:141]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tms'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:153]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:153]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdi'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:154]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:154]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tdo'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:155]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:155]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_tck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:156]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:156]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_jtag_trst'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:157]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:157]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_uart_rx'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:178]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:178]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pad_uart_tx'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:179]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:179]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2c0_scl'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:217]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:217]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2c0_sda'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:219]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:219]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2s0_sck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:226]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:226]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2s0_ws'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:228]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:228]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2s0_sdi'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:230]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:230]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_i2s1_sdi'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:232]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:232]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_data0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:239]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:239]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_data1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:241]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:241]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_data2'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:243]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:243]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_data3'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:245]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:245]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_cmd'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:247]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:247]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_sdio_sck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:249]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:249]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_sdio0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:256]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:256]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_sdio1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:258]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:258]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_sdio2'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:260]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:260]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_sdio3'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:262]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:262]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_csn0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:264]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:264]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_sck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:266]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:266]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_qspi_csn1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:268]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:268]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_pclk'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:275]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:275]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_hsync'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:277]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:277]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:279]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:279]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:281]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:281]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data2'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:283]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:283]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data3'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:285]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:285]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data4'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:287]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:287]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data5'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:289]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:289]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data6'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:291]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:291]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_data7'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:293]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:293]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_cam_vsync'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:295]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:295]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_csn1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:304]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:304]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_csn0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:306]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:306]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_ck'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:308]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:308]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_ckn'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:310]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:310]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_rwds0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:312]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:312]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio0'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:314]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:314]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio1'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:316]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:316]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio2'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:318]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:318]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio3'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:320]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:320]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio4'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:322]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:322]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio5'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:324]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:324]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio6'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:326]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:326]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_dqio7'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:328]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:328]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'FMC_hyper_reset'. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:330]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc:330]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Capstone/bicubic/bicubic.srcs/constrs_1/new/zcu102.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bicubic_compute_unit_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/bicubic_compute_unit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2610.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2627.562 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2610.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.439 . Memory (MB): peak = 2627.562 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2610.859 ; gain = 571.473
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2627.562 ; gain = 588.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -363,35 +78,39 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2610.859 ; gain = 571.473
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2627.562 ; gain = 588.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2610.859 ; gain = 571.473
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2627.562 ; gain = 588.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2610.859 ; gain = 571.473
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2627.562 ; gain = 588.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 48    
-	   4 Input   18 Bit       Adders := 6     
-	   2 Input   18 Bit       Adders := 27    
-	   2 Input    8 Bit       Adders := 3     
+	   2 Input   32 Bit       Adders := 384   
+	   4 Input   18 Bit       Adders := 48    
+	   2 Input   18 Bit       Adders := 216   
+	   2 Input    8 Bit       Adders := 24    
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 48    
-	               24 Bit    Registers := 96    
-	               18 Bit    Registers := 78    
-	                8 Bit    Registers := 3     
-	                1 Bit    Registers := 108   
+	              256 Bit    Registers := 8     
+	              128 Bit    Registers := 24    
+	               32 Bit    Registers := 384   
+	               24 Bit    Registers := 768   
+	               18 Bit    Registers := 624   
+	                8 Bit    Registers := 24    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 872   
 +---Multipliers : 
-	               9x16  Multipliers := 48    
-	               8x16  Multipliers := 48    
+	               9x16  Multipliers := 384   
+	               8x16  Multipliers := 384   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -409,25 +128,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2610.859 ; gain = 571.473
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2627.562 ; gain = 588.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3044.977 ; gain = 1005.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3095.277 ; gain = 1056.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 3074.551 ; gain = 1035.164
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 3155.602 ; gain = 1116.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3112.555 ; gain = 1073.168
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 3231.754 ; gain = 1193.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -445,50 +164,50 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name          | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|bicubic_compute_unit | kernelCalc_Blue/validInter_reg[1]  | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|bicubic_compute_unit | kernelCalc_Green/validInter_reg[1] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|bicubic_compute_unit | kernelCalc_Red/validInter_reg[1]   | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+---------------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|BCU_array   | genblk2[0].BCU_Line1/kernelCalc_Red/validInter_reg[1] | 4      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|BCU_array   | genblk2[0].BCU_Line1/kernelCalc_Red/sum_lv3_reg[1][3] | 3      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|BCU_array   | genblk3[0].BCU_Line2/kernelCalc_Red/validInter_reg[1] | 4      | 12    | NO           | NO                 | YES               | 12     | 0       | 
++------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -508,42 +227,42 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY8 |   765|
-|3     |LUT1   |   207|
-|4     |LUT2   |  2207|
-|5     |LUT3   |   744|
-|6     |LUT4   |  1884|
-|7     |LUT5   |  1602|
-|8     |LUT6   |  1461|
-|9     |SRL16E |     3|
-|10    |FDRE   |  3471|
-|11    |IBUF   |   391|
-|12    |OBUF   |    25|
+|2     |CARRY8 |  4149|
+|3     |LUT1   |  1309|
+|4     |LUT2   | 13041|
+|5     |LUT3   |  9359|
+|6     |LUT4   |  7084|
+|7     |LUT5   |  3404|
+|8     |LUT6   |  2853|
+|9     |SRL16E |    36|
+|10    |FDRE   | 22597|
+|11    |IBUF   |   388|
+|12    |OBUF   |   193|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 3126.723 ; gain = 963.586
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 3126.723 ; gain = 1087.336
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 3307.305 ; gain = 1128.691
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 3307.305 ; gain = 1268.586
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 3138.801 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1157 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3356.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4538 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3170.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3514.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 392 instances were transformed.
+  A total of 389 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 391 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 388 instances
 
-Synth Design complete, checksum: af6dccc4
+Synth Design complete, checksum: d398d367
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 110 Warnings, 84 Critical Warnings and 0 Errors encountered.
+35 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 3170.609 ; gain = 2143.680
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'D:/Capstone/bicubic/bicubic.runs/synth_1/bicubic_compute_unit.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file bicubic_compute_unit_utilization_synth.rpt -pb bicubic_compute_unit_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May  3 20:44:49 2025...
+synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 3514.387 ; gain = 2486.707
+INFO: [Common 17-1381] The checkpoint 'D:/Capstone/bicubic/bicubic.runs/synth_1/BCU_array.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3514.387 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file BCU_array_utilization_synth.rpt -pb BCU_array_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 10 18:53:12 2025...

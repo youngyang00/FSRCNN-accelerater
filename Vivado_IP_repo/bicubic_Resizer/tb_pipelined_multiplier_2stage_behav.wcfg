@@ -11,15 +11,20 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="275.201 ns"></ZoomEndTime>
-      <Cursor1Time time="365.000 ns"></Cursor1Time>
+      <ZoomStartTime time="11.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="111.901 ns"></ZoomEndTime>
+      <Cursor1Time time="185.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="212"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
+   <wave_markers>
+      <marker time="35000" label="" />
+      <marker time="45000" label="" />
+      <marker time="95000" label="" />
+   </wave_markers>
    <wvobject fp_name="/tb_bicubic_compute_unit_burst/i_clk" type="logic">
       <obj_property name="ElementShortName">i_clk</obj_property>
       <obj_property name="ObjectShortName">i_clk</obj_property>

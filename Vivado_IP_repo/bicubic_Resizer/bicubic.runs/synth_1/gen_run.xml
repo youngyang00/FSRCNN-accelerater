@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1746272629" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/kernelCalc.dcp">
-  <File Type="PA-TCL" Name="bicubic_compute_unit.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="bicubic_compute_unit_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="bicubic_compute_unit_reports.tcl"/>
-  <File Type="RDS-RDS" Name="bicubic_compute_unit.vds"/>
-  <File Type="RDS-UTIL" Name="bicubic_compute_unit_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="bicubic_compute_unit_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="bicubic_compute_unit.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="bicubic_compute_unit_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="bicubic_compute_unit_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1746870686" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/kernelCalc.dcp">
+  <File Type="PA-TCL" Name="BCU_array.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="BCU_array_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="BCU_array_reports.tcl"/>
+  <File Type="RDS-RDS" Name="BCU_array.vds"/>
+  <File Type="RDS-UTIL" Name="BCU_array_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BCU_array_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="BCU_array.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="BCU_array_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="BCU_array_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/bicubicWeightRom.v">
+    <File Path="$PSRCDIR/sources_1/bicubicWeightRom.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/pipelined_multiplier_2stage.v">
+    <File Path="$PSRCDIR/sources_1/bicubic_compute_unit.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/bicubic_compute_unit.v">
+    <File Path="$PSRCDIR/sources_1/pipelined_multiplier_2stage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/BCU_array.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/muliplier_1stage.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../capstone/bicubic/component.xml">
+      <FileInfo SFType="IPXACT"/>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="bicubic_compute_unit"/>
+      <Option Name="TopModule" Val="BCU_array"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

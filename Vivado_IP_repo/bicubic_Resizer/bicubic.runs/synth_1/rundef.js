@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log bicubic_compute_unit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bicubic_compute_unit.tcl" );
+         "-log BCU_array.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCU_array.tcl" );
 
 
 
