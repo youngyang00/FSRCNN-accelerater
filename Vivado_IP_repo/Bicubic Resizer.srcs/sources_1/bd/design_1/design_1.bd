@@ -1,0 +1,322 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2CE23048220B56C7",
+      "device": "xczu9eg-ffvb1156-2-e",
+      "gen_directory": "../../../../Bicubic Resizer.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "fifo_generator_0": "",
+      "bicubicResizer_0": ""
+    },
+    "interface_ports": {
+      "S_AXIS": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_s_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "4"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "S_AXIS_tdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "TREADY": {
+            "physical_name": "S_AXIS_tready",
+            "direction": "O"
+          },
+          "TUSER": {
+            "physical_name": "S_AXIS_tuser",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "TVALID": {
+            "physical_name": "S_AXIS_tvalid",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "s_aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      },
+      "s_aresetn": {
+        "type": "rst",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "design_1_fifo_generator_0_0",
+        "xci_path": "ip\\design_1_fifo_generator_0_0\\design_1_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "FIFO_Implementation_axis": {
+            "value": "Common_Clock_Block_RAM"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "Input_Depth_axis": {
+            "value": "2048"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          }
+        }
+      },
+      "bicubicResizer_0": {
+        "vlnv": "xilinx.com:module_ref:bicubicResizer:1.0",
+        "xci_name": "design_1_bicubicResizer_0_1",
+        "xci_path": "ip\\design_1_bicubicResizer_0_1\\design_1_bicubicResizer_0_1.xci",
+        "inst_hier_path": "bicubicResizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bicubicResizer",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_tready",
+                "direction": "I"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "4",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "s_axis_tready",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i_rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "o_BCU_pixel_R": {
+            "direction": "O"
+          },
+          "o_BCU_pixel_G": {
+            "direction": "O"
+          },
+          "o_BCU_pixel_B": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "S_AXIS_1": {
+        "interface_ports": [
+          "S_AXIS",
+          "fifo_generator_0/S_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "bicubicResizer_0_s_axis_tready": {
+        "ports": [
+          "bicubicResizer_0/s_axis_tready",
+          "fifo_generator_0/m_axis_tready"
+        ]
+      },
+      "fifo_generator_0_m_axis_tdata": {
+        "ports": [
+          "fifo_generator_0/m_axis_tdata",
+          "bicubicResizer_0/s_axis_tdata"
+        ]
+      },
+      "fifo_generator_0_m_axis_tvalid": {
+        "ports": [
+          "fifo_generator_0/m_axis_tvalid",
+          "bicubicResizer_0/s_axis_tvalid"
+        ]
+      },
+      "s_aclk_1": {
+        "ports": [
+          "s_aclk",
+          "fifo_generator_0/s_aclk",
+          "bicubicResizer_0/i_clk"
+        ]
+      },
+      "s_aresetn_1": {
+        "ports": [
+          "s_aresetn",
+          "fifo_generator_0/s_aresetn",
+          "bicubicResizer_0/i_rstn"
+        ]
+      }
+    }
+  }
+}
