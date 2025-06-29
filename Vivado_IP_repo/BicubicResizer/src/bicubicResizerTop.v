@@ -1,17 +1,17 @@
 module bicubicResizer(
-   input          i_clk,
-   input          i_rstn,
-   input [31:0]   s_axis_tdata, // MSB {8'hx,B,G,R} LSB
-   input          s_axis_tvalid,
-   output         s_axis_tready,
-   output         m_axis_tdata,
-   output         m_axis_tvalid,
-   output reg     o_BCU_pixel_R,
-   output reg     o_BCU_pixel_G,
-   output reg     o_BCU_pixel_B,
-   input          m_axis_tready
+   input                i_clk,
+   input                i_rstn,
+   input [31:0]         s_axis_tdata, // MSB {8'hx,B,G,R} LSB
+   input                s_axis_tvalid,
+   output               s_axis_tready,
+   output wire[127:0]   m_axis_tdata,
+   output               m_axis_tvalid,
+   input                m_axis_tready,
+   output wire          EOL,
+   output wire          EOF
 );
 
+wire       out_backBuffer_ready;
 wire       in_rearranger_valid;
 wire [7:0] in_rearranger_pixel_r;
 wire [7:0] in_rearranger_pixel_g;
@@ -24,6 +24,7 @@ wire [127:0] out_rearranger_pixel_b;
 wire         out_rearranger_valid;
 wire         out_rearranger_intr;
 wire [8:0]   out_rearranger_pixelCounter;
+wire [95:0]  m_axis_tdata_unpadded;
 
 wire [127:0] out_BCU_pixel_R;
 wire [127:0] out_BCU_pixel_G;
@@ -45,18 +46,12 @@ reg rearranger_ready;
 
 
 wire [8:0] rdCounter;
-assign s_axis_tready = rearranger_ready;
-assign in_rearranger_valid = s_axis_tvalid & rearranger_ready;
+assign s_axis_tready = rearranger_ready & out_backBuffer_ready;
+assign in_rearranger_valid = s_axis_tvalid & rearranger_ready & out_backBuffer_ready;
+assign m_axis_tdata = {32'b0, m_axis_tdata_unpadded};
 
 reg [8:0] Xcounter; //320
 reg [7:0] Ycounter; // 180
-
-//test logic for implementation
-always @(posedge i_clk) begin
-   o_BCU_pixel_R <= &out_BCU_pixel_R;
-   o_BCU_pixel_G <= &out_BCU_pixel_G;
-   o_BCU_pixel_B <= &out_BCU_pixel_B;
-end
 
 
 ///////////////////////////////////////////////////////
@@ -323,7 +318,7 @@ always @(posedge i_clk) begin
          end
          REARRANGE_READY:begin
             rearranger_ready <= 1'b1;
-            if (Ycounter == 'd180) begin
+            if ((Ycounter == 'd179) && (Xcounter == 'd318)) begin
                WrControlState <= WRITE_HOLD;
             end
          end
@@ -377,5 +372,21 @@ BCU_array bcu_array(
    .o_pixel_B(out_BCU_pixel_B), //output [127:0]        
    .o_valid(out_BCU_valid)//output               
 );
+
+bicubicValueBuffer BackBuffer(
+   .i_clk(i_clk),//input          
+   .i_valid(out_BCU_valid),//input          
+   .i_rstn(i_rstn),//input          
+   .i_pixel_data_r(out_BCU_pixel_R),//input [127:0]  
+   .i_pixel_data_g(out_BCU_pixel_G),//input [127:0]  
+   .i_pixel_data_b(out_BCU_pixel_B),//input [127:0]  
+   .o_loadReady(out_backBuffer_ready),//output reg     
+   .m_axis_tdata(m_axis_tdata_unpadded),//output [95:0]  
+   .m_axis_tvalid(m_axis_tvalid),//output         
+   .m_axis_tready(m_axis_tready),//input
+   .EOL(EOL),
+   .EOF(EOF)          
+);
+
    
 endmodule

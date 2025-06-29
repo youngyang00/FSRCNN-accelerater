@@ -3,7 +3,7 @@
  *
  * Usage:
  *   gcc reorder_to_matrix.c -o reorder_to_matrix
- *   ./reorder_to_matrix output_pixels.txt
+ *   ./reorder_pixels input_pixels2.txt
  *
  * Reads lines "x y R G B" (hex or decimal) from the input text (skips '#' lines),
  * organizes into 2D arrays per channel, and writes three files:
