@@ -132,7 +132,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f74a03a</spirit:value>
+            <spirit:value>a0bd9445</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -148,7 +148,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f74a03a</spirit:value>
+            <spirit:value>a0bd9445</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -245,7 +245,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">127</spirit:left>
+            <spirit:left spirit:format="long">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -397,6 +397,11 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>src/colPixelStream.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>src/fifo_bram_quad_to_single_axi4s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -424,7 +429,7 @@
       <spirit:file>
         <spirit:name>src/bicubicResizerTop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_30294bad</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c52e5834</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -447,6 +452,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>src/bicubic_compute_unit.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/colPixelStream.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -582,17 +592,17 @@
       </xilinx:taxonomies>
       <xilinx:displayName>BicubicResizer</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:bicubicResizer:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2025-06-27T03:22:19Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-07-01T07:53:31Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1cb9a87e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c892ac65"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="fef52697"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cdd3b01f"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="e36eb29d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0d01cd74"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="06601e6c"/>
     </xilinx:packagingInfo>

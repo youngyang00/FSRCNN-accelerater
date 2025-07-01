@@ -4,7 +4,7 @@ module bicubicResizer(
    input [31:0]         s_axis_tdata, // MSB {8'hx,B,G,R} LSB
    input                s_axis_tvalid,
    output               s_axis_tready,
-   output wire[127:0]   m_axis_tdata,
+   output wire[31:0]    m_axis_tdata,
    output               m_axis_tvalid,
    input                m_axis_tready,
    output wire          EOL,
@@ -24,7 +24,7 @@ wire [127:0] out_rearranger_pixel_b;
 wire         out_rearranger_valid;
 wire         out_rearranger_intr;
 wire [8:0]   out_rearranger_pixelCounter;
-wire [95:0]  m_axis_tdata_unpadded;
+wire [23:0]  m_axis_tdata_unpadded;
 
 wire [127:0] out_BCU_pixel_R;
 wire [127:0] out_BCU_pixel_G;
@@ -48,7 +48,7 @@ reg rearranger_ready;
 wire [8:0] rdCounter;
 assign s_axis_tready = rearranger_ready & out_backBuffer_ready;
 assign in_rearranger_valid = s_axis_tvalid & rearranger_ready & out_backBuffer_ready;
-assign m_axis_tdata = {32'b0, m_axis_tdata_unpadded};
+assign m_axis_tdata = {8'b0, m_axis_tdata_unpadded};
 
 reg [8:0] Xcounter; //320
 reg [7:0] Ycounter; // 180
@@ -381,7 +381,7 @@ bicubicValueBuffer BackBuffer(
    .i_pixel_data_g(out_BCU_pixel_G),//input [127:0]  
    .i_pixel_data_b(out_BCU_pixel_B),//input [127:0]  
    .o_loadReady(out_backBuffer_ready),//output reg     
-   .m_axis_tdata(m_axis_tdata_unpadded),//output [95:0]  
+   .m_axis_tdata(m_axis_tdata_unpadded),//output [23:0]  
    .m_axis_tvalid(m_axis_tvalid),//output         
    .m_axis_tready(m_axis_tready),//input
    .EOL(EOL),
