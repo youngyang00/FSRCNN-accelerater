@@ -1,0 +1,1600 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jul 17 19:57:23 2025
+# Process ID: 16436
+# Current directory: D:/mapping_layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11800 D:\mapping_layer\mapping_layer.xpr
+# Log file: D:/mapping_layer/vivado.log
+# Journal file: D:/mapping_layer\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/mapping_layer/mapping_layer.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1733.016 ; gain = 312.297
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v
+update_compile_order -fileset sim_1
+set_property top tb_PE [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PE' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/mapping_layer/mapping_layer.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dsp_macro_0'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'i_addr' [D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v:52]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1794.656 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_PE_behav -key {Behavioral:sim_1:Functional:tb_PE} -tclbatch {tb_PE.tcl} -view {D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg
+WARNING: Simulation object /tb_PE_M_layer/i_clk was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/i_data was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/i_data2 was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/i_C was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/inter was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/i_valid was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/o_p was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/o_p was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/i_clr was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/resetInter was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/A was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/B was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/C was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/P was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/CLK was not found in the design.
+WARNING: Simulation object /tb_PE_M_layer/uut/DSP/CE was not found in the design.
+source tb_PE.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_PE_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1855.102 ; gain = 60.445
+current_wave_config {pixelArranger_behav.wcfg}
+pixelArranger_behav.wcfg
+add_wave {{/tb_PE/i_clk}} {{/tb_PE/i_clr}} {{/tb_PE/i_data}} {{/tb_PE/en}} {{/tb_PE/i_addr}} {{/tb_PE/addr}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PE' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'i_addr' [D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v:52]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1855.102 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1855.102 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1855.102 ; gain = 0.000
+run 10 us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1855.102 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1855.102 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1855.102 ; gain = 0.000
+current_wave_config {pixelArranger_behav.wcfg}
+pixelArranger_behav.wcfg
+add_wave {{/tb_PE/DUT/i_clk}} {{/tb_PE/DUT/i_clr}} {{/tb_PE/DUT/i_pixel}} {{/tb_PE/DUT/i_en}} {{/tb_PE/DUT/i_addr}} {{/tb_PE/DUT/o_result}} {{/tb_PE/DUT/o_valid}} {{/tb_PE/DUT/resetInter}} {{/tb_PE/DUT/DSP_inter}} {{/tb_PE/DUT/weight_packed}} {{/tb_PE/DUT/adderReg_pipe0}} {{/tb_PE/DUT/result}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1858.906 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'a' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1863.422 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1863.562 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1863.562 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1864.309 ; gain = 0.746
+save_wave_config {D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PE' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1864.660 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_PE_behav -key {Behavioral:sim_1:Functional:tb_PE} -tclbatch {tb_PE.tcl} -view {D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg
+source tb_PE.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_PE_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1866.637 ; gain = 1.977
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1866.637 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1866.637 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1866.637 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'addr' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:68]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.984 ; gain = 0.445
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.984 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.984 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1868.984 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:46]
+WARNING: [VRFC 10-3705] select index 2 into 'resetInter' is out of bounds [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1869.090 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1869.090 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1869.090 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2043.496 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async(DATA1=24'b0111...
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2043.496 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async(DATA1=24'b0111...
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2043.496 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async(DATA1=24'b0111...
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2077.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2077.594 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2077.594 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+ERROR: [VRFC 10-4982] syntax error near ',' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:36]
+ERROR: [VRFC 10-8530] module 'PE' is ignored due to previous errors [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:1]
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111,DATA4=24'b011111111101011001111111,DATA5=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async(DATA1=24'b0111...
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2077.594 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PE_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_6x24_ff_async
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sim_1/new/tb_PE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PE
+"xvhdl --incr --relax -prj tb_PE_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_PE'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_PE_behav xil_defaultlib.tb_PE xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:30]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'b' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:40]
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'p' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v:50]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/PE.v" Line 1. Module PE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/mapping_layer/mapping_layer.srcs/sources_1/new/rom_weights.v" Line 1. Module rom_6x24_ff_async(DATA1=24'b011111111101011001111111,DATA2=24'b011101011010101111111) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.rom_6x24_ff_async(DATA1=24'b0111...
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.tb_PE
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PE_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 2077.594 ; gain = 0.000
+save_wave_config {D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top dsp_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top_file D:/mapping_layer/mapping_layer.srcs/sources_1/new/dsp_test.v [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'dsp_test'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dsp_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj dsp_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/mapping_layer/mapping_layer.srcs/sources_1/new/dsp_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dsp_test
+"xvhdl --incr --relax -prj dsp_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dsp_test_behav xil_defaultlib.dsp_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dsp_test_behav xil_defaultlib.dsp_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/dsp_test.v:19]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.dsp_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dsp_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dsp_test_behav -key {Behavioral:sim_1:Functional:dsp_test} -tclbatch {dsp_test.tcl} -view {D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/mapping_layer/mapping_layer.srcs/sim_1/imports/mapping_layer/pixelArranger_behav.wcfg
+WARNING: Simulation object /tb_PE/DUT/i_clk was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/i_clr was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/i_pixel was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/i_en was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/i_addr was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/o_result was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/o_valid was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/resetInter was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP_inter was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/weight_packed was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/adderReg_pipe0 was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/result was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP0/CE was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP0/A was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP0/B was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP0/C was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP0/P was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP1/CE was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP1/A was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP1/B was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP1/C was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP1/P was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/CLK was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/CE was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/A was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/B was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/C was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/DSP2/P was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/weight_rom/addr was not found in the design.
+WARNING: Simulation object /tb_PE/DUT/weight_rom/dout was not found in the design.
+source dsp_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dsp_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2077.594 ; gain = 0.000
+current_wave_config {pixelArranger_behav.wcfg}
+pixelArranger_behav.wcfg
+add_wave {{/dsp_test/i_clk}} {{/dsp_test/i_clr}} {{/dsp_test/i_data}} {{/dsp_test/i_data2}} {{/dsp_test/i_C}} {{/dsp_test/i_valid}} {{/dsp_test/o_p}} {{/dsp_test/inter}} {{/dsp_test/resetInter}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'dsp_test'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj dsp_test_vlog.prj"
+"xvhdl --incr --relax -prj dsp_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'dsp_test'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/mapping_layer/mapping_layer.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dsp_test_behav xil_defaultlib.dsp_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dsp_test_behav xil_defaultlib.dsp_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'c' [D:/mapping_layer/mapping_layer.srcs/sources_1/new/dsp_test.v:19]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2077.594 ; gain = 0.000
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 17 21:34:57 2025...

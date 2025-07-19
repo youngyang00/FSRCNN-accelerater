@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_PE_array_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_PE_array" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="99.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="359.201 ns"></ZoomEndTime>
+      <Cursor1Time time="135.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="162"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="51" />
+   <wave_markers>
+      <marker time="115001" label="" />
+      <marker time="25000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/tb_PE_array/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/i_clr" type="logic">
+      <obj_property name="ElementShortName">i_clr</obj_property>
+      <obj_property name="ObjectShortName">i_clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[287:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[287:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/i_addr" type="array">
+      <obj_property name="ElementShortName">i_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider140">
+      <obj_property name="label">weight</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/i_clr" type="logic">
+      <obj_property name="ElementShortName">i_clr</obj_property>
+      <obj_property name="ObjectShortName">i_clr</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/i_addr" type="array">
+      <obj_property name="ElementShortName">i_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addr[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/i_pixel" type="array">
+      <obj_property name="ElementShortName">i_pixel[287:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pixel[287:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/o_result" type="array">
+      <obj_property name="ElementShortName">o_result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_result[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pixelChannelChunks" type="array">
+      <obj_property name="ElementShortName">pixelChannelChunks[0:2][95:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelChannelChunks[0:2][95:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pixelCol" type="array">
+      <obj_property name="ElementShortName">pixelCol[0:11][23:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelCol[0:11][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/peOut" type="array">
+      <obj_property name="ElementShortName">peOut[0:11][23:0]</obj_property>
+      <obj_property name="ObjectShortName">peOut[0:11][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/result_inter1" type="array">
+      <obj_property name="ElementShortName">result_inter1[0:3][23:0]</obj_property>
+      <obj_property name="ObjectShortName">result_inter1[0:3][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/result_inter2" type="array">
+      <obj_property name="ElementShortName">result_inter2[0:1][23:0]</obj_property>
+      <obj_property name="ObjectShortName">result_inter2[0:1][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/result_inter3" type="array">
+      <obj_property name="ElementShortName">result_inter3[23:0]</obj_property>
+      <obj_property name="ObjectShortName">result_inter3[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/requant_dsp_out" type="array">
+      <obj_property name="ElementShortName">requant_dsp_out[34:0]</obj_property>
+      <obj_property name="ObjectShortName">requant_dsp_out[34:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/requant_dsp_out_shifted" type="array">
+      <obj_property name="ElementShortName">requant_dsp_out_shifted[18:0]</obj_property>
+      <obj_property name="ObjectShortName">requant_dsp_out_shifted[18:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/i_pixel" type="array">
+      <obj_property name="ElementShortName">i_pixel[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pixel[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/weight_packed" type="array">
+      <obj_property name="ElementShortName">weight_packed[23:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_packed[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider254">
+      <obj_property name="label">PE0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/i_pixel" type="array">
+      <obj_property name="ElementShortName">i_pixel[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pixel[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/i_en" type="logic">
+      <obj_property name="ElementShortName">i_en</obj_property>
+      <obj_property name="ObjectShortName">i_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/i_addr" type="array">
+      <obj_property name="ElementShortName">i_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/o_result" type="array">
+      <obj_property name="ElementShortName">o_result[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_result[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/resetInter" type="array">
+      <obj_property name="ElementShortName">resetInter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">resetInter[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP_inter" type="array">
+      <obj_property name="ElementShortName">DSP_inter[0:2][19:0]</obj_property>
+      <obj_property name="ObjectShortName">DSP_inter[0:2][19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/weight_packed" type="array">
+      <obj_property name="ElementShortName">weight_packed[23:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_packed[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/adderReg_pipe0" type="array">
+      <obj_property name="ElementShortName">adderReg_pipe0[23:0]</obj_property>
+      <obj_property name="ObjectShortName">adderReg_pipe0[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/o_result" type="array">
+      <obj_property name="ElementShortName">o_result[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_result[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider283">
+      <obj_property name="label">DSP0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/A" type="array">
+      <obj_property name="ElementShortName">A[17:0]</obj_property>
+      <obj_property name="ObjectShortName">A[17:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/B" type="array">
+      <obj_property name="ElementShortName">B[17:0]</obj_property>
+      <obj_property name="ObjectShortName">B[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP0/P" type="array">
+      <obj_property name="ElementShortName">P[36:0]</obj_property>
+      <obj_property name="ObjectShortName">P[36:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider328">
+      <obj_property name="label">DSP1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP1/A" type="array">
+      <obj_property name="ElementShortName">A[17:0]</obj_property>
+      <obj_property name="ObjectShortName">A[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP1/B" type="array">
+      <obj_property name="ElementShortName">B[17:0]</obj_property>
+      <obj_property name="ObjectShortName">B[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP1/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP1/P" type="array">
+      <obj_property name="ElementShortName">P[36:0]</obj_property>
+      <obj_property name="ObjectShortName">P[36:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider333">
+      <obj_property name="label">DSP2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP2/A" type="array">
+      <obj_property name="ElementShortName">A[17:0]</obj_property>
+      <obj_property name="ObjectShortName">A[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP2/B" type="array">
+      <obj_property name="ElementShortName">B[17:0]</obj_property>
+      <obj_property name="ObjectShortName">B[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP2/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_array/DUT/pe0/DSP2/P" type="array">
+      <obj_property name="ElementShortName">P[36:0]</obj_property>
+      <obj_property name="ObjectShortName">P[36:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

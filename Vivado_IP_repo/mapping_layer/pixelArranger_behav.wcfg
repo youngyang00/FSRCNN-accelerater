@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_PE_M_layer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_PE_M_layer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="56.875 ns"></ZoomStartTime>
+      <ZoomEndTime time="105.626 ns"></ZoomEndTime>
+      <Cursor1Time time="65.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wave_markers>
+      <marker time="25000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/tb_PE_M_layer/i_clk" type="logic">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[17:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/i_data2" type="array">
+      <obj_property name="ElementShortName">i_data2[17:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data2[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/i_C" type="array">
+      <obj_property name="ElementShortName">i_C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">i_C[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/i_valid" type="logic">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/o_p" type="array">
+      <obj_property name="ElementShortName">o_p[47:0]</obj_property>
+      <obj_property name="ObjectShortName">o_p[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/o_p" type="array">
+      <obj_property name="ElementShortName">o_p[47:0]</obj_property>
+      <obj_property name="ObjectShortName">o_p[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/inter" type="array">
+      <obj_property name="ElementShortName">inter[47:0]</obj_property>
+      <obj_property name="ObjectShortName">inter[47:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/resetInter" type="array">
+      <obj_property name="ElementShortName">resetInter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">resetInter[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider46">
+      <obj_property name="label">DSP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/A" type="array">
+      <obj_property name="ElementShortName">A[17:0]</obj_property>
+      <obj_property name="ObjectShortName">A[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/B" type="array">
+      <obj_property name="ElementShortName">B[17:0]</obj_property>
+      <obj_property name="ObjectShortName">B[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/C" type="array">
+      <obj_property name="ElementShortName">C[47:0]</obj_property>
+      <obj_property name="ObjectShortName">C[47:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/P" type="array">
+      <obj_property name="ElementShortName">P[47:0]</obj_property>
+      <obj_property name="ObjectShortName">P[47:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_PE_M_layer/uut/DSP/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+</wave_config>

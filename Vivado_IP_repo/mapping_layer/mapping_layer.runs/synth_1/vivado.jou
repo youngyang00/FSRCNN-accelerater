@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Jul 19 14:41:11 2025
+# Process ID: 21180
+# Current directory: D:/mapping_layer/mapping_layer.runs/synth_1
+# Command line: vivado.exe -log rom_6x24_ff_async.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rom_6x24_ff_async.tcl
+# Log file: D:/mapping_layer/mapping_layer.runs/synth_1/rom_6x24_ff_async.vds
+# Journal file: D:/mapping_layer/mapping_layer.runs/synth_1\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+source rom_6x24_ff_async.tcl -notrace

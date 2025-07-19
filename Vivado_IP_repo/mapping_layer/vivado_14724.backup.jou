@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jul 18 22:56:05 2025
+# Process ID: 14724
+# Current directory: D:/mapping_layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19576 D:\mapping_layer\mapping_layer.xpr
+# Log file: D:/mapping_layer/vivado.log
+# Journal file: D:/mapping_layer\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/mapping_layer/mapping_layer.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+close_design
+open_run impl_1
+report_utilization -name utilization_1
