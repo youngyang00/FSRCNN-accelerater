@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../mapping_layer.gen/sources_1/ip/dsp_Requant/sim/dsp_Requant.vhd" \
-
-nosort

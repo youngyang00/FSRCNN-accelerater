@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jul 23 23:52:38 2025
+# Process ID: 3564
+# Current directory: D:/Capstone/ip_repo/MappingLayer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16652 D:\Capstone\ip_repo\MappingLayer\tmp_edit_project.xpr
+# Log file: D:/Capstone/ip_repo/MappingLayer/vivado.log
+# Journal file: D:/Capstone/ip_repo/MappingLayer\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Capstone/ip_repo/MappingLayer/tmp_edit_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {D:\Capstone\ip_repo\MappingLayer\component.xml}
+ipx::remove_file src/pixelArranger_behav.wcfg [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::remove_file src/pixelArranger_behav.wcfg [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  d:/Capstone/ip_repo/MappingLayer [current_project]
+update_ip_catalog
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Capstone/ip_repo/MappingLayer
+ipx::remove_file src/pixelArranger_behav.wcfg [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Capstone/ip_repo/MappingLayer

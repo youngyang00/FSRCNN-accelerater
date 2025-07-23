@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../../../mapping_layer/mapping_layer.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd" \
+"../../../../../../mapping_layer/mapping_layer.gen/sources_1/ip/dsp_Requant/sim/dsp_Requant.vhd" \
+
+nosort

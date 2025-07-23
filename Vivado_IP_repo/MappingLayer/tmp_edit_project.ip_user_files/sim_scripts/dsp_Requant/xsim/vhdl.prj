@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../tmp_edit_project.gen/sources_1/ip/dsp_Requant/sim/dsp_Requant.vhd" \
+
+nosort
