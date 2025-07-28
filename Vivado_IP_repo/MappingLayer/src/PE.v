@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Gwangsun Shin
+
 module PE#(
   parameter WEIGHT0 = 24'h10D3E8,
   parameter WEIGHT1 = 24'h7FD67F,

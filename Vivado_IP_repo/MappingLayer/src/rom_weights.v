@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Gwangsun Shin
+
 module rom_6x24_ff_async #(
     parameter [23:0] DATA0 = 24'h10D3E8,
     parameter [23:0] DATA1 = 24'h7FD6B5,

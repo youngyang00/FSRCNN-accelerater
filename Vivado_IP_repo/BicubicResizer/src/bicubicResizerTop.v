@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Gwangsun Shin
+
 module bicubicResizer(
    input                i_clk,
    input                i_rstn,
@@ -223,11 +226,11 @@ always @(posedge i_clk) begin
                             inter_BCU_pixel_r[95:80],inter_BCU_pixel_r[87:80],inter_BCU_pixel_r[87:80],
                             inter_BCU_pixel_r[63:48],inter_BCU_pixel_r[55:48],inter_BCU_pixel_r[55:48],
                             inter_BCU_pixel_r[63:48],inter_BCU_pixel_r[55:48],inter_BCU_pixel_r[55:48]};
-         in_BCU_pixel_b <= {inter_BCU_pixel_g[127:112],inter_BCU_pixel_g[119:112],inter_BCU_pixel_g[119:112],
+         in_BCU_pixel_g <= {inter_BCU_pixel_g[127:112],inter_BCU_pixel_g[119:112],inter_BCU_pixel_g[119:112],
                             inter_BCU_pixel_g[95:80],inter_BCU_pixel_g[87:80],inter_BCU_pixel_g[87:80],
                             inter_BCU_pixel_g[63:48],inter_BCU_pixel_g[55:48],inter_BCU_pixel_g[55:48],
                             inter_BCU_pixel_g[63:48],inter_BCU_pixel_g[55:48],inter_BCU_pixel_g[55:48]};
-         in_BCU_pixel_g <= {inter_BCU_pixel_b[127:112],inter_BCU_pixel_b[119:112],inter_BCU_pixel_b[119:112],
+         in_BCU_pixel_b <= {inter_BCU_pixel_b[127:112],inter_BCU_pixel_b[119:112],inter_BCU_pixel_b[119:112],
                             inter_BCU_pixel_b[95:80],inter_BCU_pixel_b[87:80],inter_BCU_pixel_b[87:80],
                             inter_BCU_pixel_b[63:48],inter_BCU_pixel_b[55:48],inter_BCU_pixel_b[55:48],
                             inter_BCU_pixel_b[63:48],inter_BCU_pixel_b[55:48],inter_BCU_pixel_b[55:48]};
@@ -236,10 +239,10 @@ always @(posedge i_clk) begin
          in_BCU_pixel_r <= { inter_BCU_pixel_r[127:64],
                              inter_BCU_pixel_r[95:64],
                              inter_BCU_pixel_r[95:64]};
-         in_BCU_pixel_b <= { inter_BCU_pixel_g[127:64],
+         in_BCU_pixel_g <= { inter_BCU_pixel_g[127:64],
                              inter_BCU_pixel_g[95:64],
                              inter_BCU_pixel_g[95:64]};
-         in_BCU_pixel_g <= { inter_BCU_pixel_b[127:64],
+         in_BCU_pixel_b <= { inter_BCU_pixel_b[127:64],
                              inter_BCU_pixel_b[95:64],
                              inter_BCU_pixel_b[95:64]};        
       end
@@ -248,11 +251,11 @@ always @(posedge i_clk) begin
                             inter_BCU_pixel_r[95:72],inter_BCU_pixel_r[79:72],
                             inter_BCU_pixel_r[95:72],inter_BCU_pixel_r[79:72],
                             inter_BCU_pixel_r[95:72],inter_BCU_pixel_r[79:72]};
-         in_BCU_pixel_b <= {inter_BCU_pixel_g[127:104],inter_BCU_pixel_g[111:104],
+         in_BCU_pixel_g <= {inter_BCU_pixel_g[127:104],inter_BCU_pixel_g[111:104],
                             inter_BCU_pixel_g[95:72],inter_BCU_pixel_g[79:72],
                             inter_BCU_pixel_g[95:72],inter_BCU_pixel_g[79:72],
                             inter_BCU_pixel_g[95:72],inter_BCU_pixel_g[79:72]};
-         in_BCU_pixel_g <= {inter_BCU_pixel_b[127:104],inter_BCU_pixel_b[111:104],
+         in_BCU_pixel_b <= {inter_BCU_pixel_b[127:104],inter_BCU_pixel_b[111:104],
                             inter_BCU_pixel_b[95:72],inter_BCU_pixel_b[79:72],
                             inter_BCU_pixel_b[95:72],inter_BCU_pixel_b[79:72],
                             inter_BCU_pixel_b[95:72],inter_BCU_pixel_b[79:72]};        
@@ -262,11 +265,11 @@ always @(posedge i_clk) begin
                             inter_BCU_pixel_r[95:80],inter_BCU_pixel_r[87:80],inter_BCU_pixel_r[87:80],
                             inter_BCU_pixel_r[95:80],inter_BCU_pixel_r[87:80],inter_BCU_pixel_r[87:80],
                             inter_BCU_pixel_r[95:80],inter_BCU_pixel_r[87:80],inter_BCU_pixel_r[87:80]};
-         in_BCU_pixel_b <= {inter_BCU_pixel_g[127:112],inter_BCU_pixel_g[119:112],inter_BCU_pixel_g[119:112],
+         in_BCU_pixel_g <= {inter_BCU_pixel_g[127:112],inter_BCU_pixel_g[119:112],inter_BCU_pixel_g[119:112],
                             inter_BCU_pixel_g[95:80],inter_BCU_pixel_g[87:80],inter_BCU_pixel_g[87:80],
                             inter_BCU_pixel_g[95:80],inter_BCU_pixel_g[87:80],inter_BCU_pixel_g[87:80],
                             inter_BCU_pixel_g[95:80],inter_BCU_pixel_g[87:80],inter_BCU_pixel_g[87:80]};
-         in_BCU_pixel_g <= {inter_BCU_pixel_b[127:112],inter_BCU_pixel_b[119:112],inter_BCU_pixel_b[119:112],
+         in_BCU_pixel_b <= {inter_BCU_pixel_b[127:112],inter_BCU_pixel_b[119:112],inter_BCU_pixel_b[119:112],
                             inter_BCU_pixel_b[95:80],inter_BCU_pixel_b[87:80],inter_BCU_pixel_b[87:80],
                             inter_BCU_pixel_b[95:80],inter_BCU_pixel_b[87:80],inter_BCU_pixel_b[87:80],
                             inter_BCU_pixel_b[95:80],inter_BCU_pixel_b[87:80],inter_BCU_pixel_b[87:80]};         

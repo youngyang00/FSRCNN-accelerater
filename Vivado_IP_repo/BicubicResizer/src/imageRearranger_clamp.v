@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Gwangsun Shin
+
 module imageRearranger_clamp#(
    parameter INPUT_IMAGE_WIDTH = 320,
    parameter INPUT_IMAGE_HEIGHT = 180

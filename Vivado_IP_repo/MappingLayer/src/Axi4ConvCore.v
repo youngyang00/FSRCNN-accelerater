@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Gwangsun Shin
 module Axi4ConvCore#(
    parameter REQUANT = 172,
    parameter weight01_1_pe0 = 24'h10D3E8,
