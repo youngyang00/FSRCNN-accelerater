@@ -14,6 +14,11 @@ module bicubicResizer(
    output wire          EOF
 );
 
+wire         out_rearranger_valid_before;
+wire [127:0] out_rearranger_pixel_r_before;
+wire [127:0] out_rearranger_pixel_g_before;
+wire [127:0] out_rearranger_pixel_b_before;
+
 wire       out_backBuffer_ready;
 wire       in_rearranger_valid;
 wire [7:0] in_rearranger_pixel_r;
@@ -21,10 +26,10 @@ wire [7:0] in_rearranger_pixel_g;
 wire [7:0] in_rearranger_pixel_b;
 reg        in_rearranger_force_read;
 
-wire [127:0] out_rearranger_pixel_r;
-wire [127:0] out_rearranger_pixel_g;
-wire [127:0] out_rearranger_pixel_b;
-wire         out_rearranger_valid;
+reg [127:0]  out_rearranger_pixel_r;
+reg [127:0]  out_rearranger_pixel_g;
+reg [127:0]  out_rearranger_pixel_b;
+reg          out_rearranger_valid;
 wire         out_rearranger_intr;
 wire [8:0]   out_rearranger_pixelCounter;
 wire [23:0]  m_axis_tdata_unpadded;
@@ -48,7 +53,8 @@ reg         rearranger_CLR_done;
 reg rearranger_ready;
 
 
-wire [8:0] rdCounter;
+reg [8:0] rdCounter;
+wire  [8:0] rdCounterBefore;
 assign s_axis_tready = rearranger_ready & out_backBuffer_ready;
 assign in_rearranger_valid = s_axis_tvalid & rearranger_ready & out_backBuffer_ready;
 assign m_axis_tdata = {8'b0, m_axis_tdata_unpadded};
@@ -341,6 +347,23 @@ end
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
+always @(posedge i_clk) begin
+   if (!i_rstn | rearranger_CLR) begin
+      rdCounter <= 'd0;
+      out_rearranger_pixel_r <= 'd0;
+      out_rearranger_pixel_g <= 'd0;
+      out_rearranger_pixel_b <= 'd0;
+      out_rearranger_valid <= 'd0;
+   end
+   else begin
+      rdCounter <= rdCounterBefore;
+      out_rearranger_pixel_r <= out_rearranger_pixel_r_before;
+      out_rearranger_pixel_g <= out_rearranger_pixel_g_before;
+      out_rearranger_pixel_b <= out_rearranger_pixel_b_before;
+      out_rearranger_valid <= out_rearranger_valid_before;
+   end
+end
+
 assign in_rearranger_pixel_r = s_axis_tdata[7:0];
 assign in_rearranger_pixel_g = s_axis_tdata[15:8];
 assign in_rearranger_pixel_b = s_axis_tdata[23:16];
@@ -353,12 +376,12 @@ imageRearranger_clamp Rearranger(
    .i_pixel_data_g(in_rearranger_pixel_g),//input       [7:0]    
    .i_pixel_data_b(in_rearranger_pixel_b),//input       [7:0]    
    .i_force_read(in_rearranger_force_read),//input
-   .o_rdCounter(rdCounter),
+   .o_rdCounter(rdCounterBefore),
    .o_pixelCounter(out_rearranger_pixelCounter),                
-   .o_pixel_data_r(out_rearranger_pixel_r),//output reg  [127:0]  
-   .o_pixel_data_g(out_rearranger_pixel_g),//output reg  [127:0]  
-   .o_pixel_data_b(out_rearranger_pixel_b),//output reg  [127:0]  
-   .o_pixel_data_valid(out_rearranger_valid),//output               
+   .o_pixel_data_r(out_rearranger_pixel_r_before),//output reg  [127:0]  
+   .o_pixel_data_g(out_rearranger_pixel_g_before),//output reg  [127:0]  
+   .o_pixel_data_b(out_rearranger_pixel_b_before),//output reg  [127:0]  
+   .o_pixel_data_valid(out_rearranger_valid_before),//output               
    .o_intr(out_rearranger_intr)//output reg           
 );
 

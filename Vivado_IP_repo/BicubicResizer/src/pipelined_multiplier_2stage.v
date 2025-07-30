@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2025 Gwangsun Shin
-
 module pipelined_multiplier_2stage#(
   parameter INPUT_WIDTH = 18
 )(

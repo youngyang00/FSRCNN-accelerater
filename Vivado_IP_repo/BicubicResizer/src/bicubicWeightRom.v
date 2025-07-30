@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2025 Gwangsun Shin
-
 module bicubic_rom2d (
     input  wire [1:0] ix,
     input  wire [1:0] iy,

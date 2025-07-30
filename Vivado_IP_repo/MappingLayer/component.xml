@@ -111,6 +111,10 @@
           <spirit:name>ASSOCIATED_RESET</spirit:name>
           <spirit:value spirit:id="BUSIFPARAM_VALUE.I_CLK.ASSOCIATED_RESET">i_rstn</spirit:value>
         </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.I_CLK.ASSOCIATED_BUSIF">m_axis:s_axis</spirit:value>
+        </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
   </spirit:busInterfaces>
@@ -137,7 +141,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>50cf5328</spirit:value>
+            <spirit:value>98dc03a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -162,7 +166,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>59f887dd</spirit:value>
+            <spirit:value>334e2cbd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -410,7 +414,7 @@
       <spirit:file>
         <spirit:name>src/AxiMappingLayerTop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a3205bca</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_36b1a85f</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -572,13 +576,13 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-07-23T14:55:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-07-30T05:14:25Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bafe0022"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8475e6d0"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1cb9a87e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="18365e38"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d6091170"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="7f285978"/>
     </xilinx:packagingInfo>

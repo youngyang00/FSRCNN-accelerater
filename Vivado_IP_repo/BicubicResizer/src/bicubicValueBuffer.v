@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-// Copyright (c) 2025 Gwangsun Shin
-
 module bicubicValueBuffer(
    input          i_clk,
    input          i_valid,
