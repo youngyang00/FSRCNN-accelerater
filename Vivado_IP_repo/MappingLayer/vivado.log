@@ -110,3 +110,5 @@ INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
 ipx::save_core [ipx::current_core]
 update_ip_catalog -rebuild -repo_path d:/git/FSRCNN-accelerater/Vivado_IP_repo/MappingLayer
 INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/git/FSRCNN-accelerater/Vivado_IP_repo/MappingLayer'
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 30 14:32:39 2025...

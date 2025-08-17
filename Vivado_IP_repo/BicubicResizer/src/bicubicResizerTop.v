@@ -4,7 +4,7 @@
 module bicubicResizer(
    input                i_clk,
    input                i_rstn,
-   input [31:0]         s_axis_tdata, // MSB {8'hx,B,G,R} LSB
+   input [23:0]         s_axis_tdata, // MSB {8'hx,B,G,R} LSB
    input                s_axis_tvalid,
    output               s_axis_tready,
    output wire[31:0]    m_axis_tdata,
