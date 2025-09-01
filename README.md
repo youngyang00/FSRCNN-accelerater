@@ -7,13 +7,13 @@
 
 **조수환 (suhwanJo03)**  
 - GitHub: https://github.com/suhwanJo03
-- Role: **Feature Extraction Layer & Expanding Layer RTL Design**
+- Role: **Shrinking, Expanding Layer RTL Design & TCP transport FW design**
 - Repo in Detail:
   
 **이준식 (jun-sik Lee)**  
 - GitHub: https://github.com/dlwnstlr1010
-- Role: **Feature Extraction Layer & Expanding Layer RTL Design**
-- Repo in Detail:
+- Role: **Feature Extraction Layer RTL Design & Model Compression**
+- Repo in Detail: [Feature Extraction]([https://github.com/youngyang00/fsrcnn-mapping-layer](https://github.com/dlwnstlr1010/FSRCNN-Accelerator/tree/main/Feature_Extraction_Layer))
 
 **이정호 (jungho0479)**  
 - GitHub: https://github.com/jungho0479
