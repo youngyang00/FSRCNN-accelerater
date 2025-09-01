@@ -17,8 +17,8 @@
 
 **이정호 (jungho0479)**  
 - GitHub: https://github.com/jungho0479
-- Role: **software reference, quantization & Deconvolution Layer RTL Design**
-- Repo in Detail:
+- Role: **Deconvolution Layer RTL Design & software reference, quantization**
+- Repo in Detail: https://github.com/suhwanJo03/FSRCNN_ZCU102_accelerator
 
 
 ## Project Overview
