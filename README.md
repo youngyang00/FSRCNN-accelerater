@@ -3,7 +3,7 @@
 **신광선 (Gwangsun Shin)**  
 - GitHub: https://github.com/youngyang00
 - Role: **Mapping Layer RTL Design & Design Verification based on SystemVerilog**  
-- Repo in Detail: [Mapping Layer RTL IP](https://github.com/youngyang00/fsrcnn-mapping-layer)
+- Repo in Detail: https://github.com/youngyang00/fsrcnn-mapping-layer
 
 **조수환 (suhwanJo03)**  
 - GitHub: https://github.com/suhwanJo03
@@ -13,7 +13,7 @@
 **이준식 (jun-sik Lee)**  
 - GitHub: https://github.com/dlwnstlr1010
 - Role: **Feature Extraction Layer RTL Design & Model Compression**
-- Repo in Detail: [Feature Extraction]([https://github.com/youngyang00/fsrcnn-mapping-layer](https://github.com/dlwnstlr1010/FSRCNN-Accelerator/tree/main/Feature_Extraction_Layer))
+- Repo in Detail: [https://github.com/dlwnstlr1010/FSRCNN-Accelerator/tree/main/Feature_Extraction_Layer](https://github.com/dlwnstlr1010/FSRCNN-Accelerator/tree/main/Feature_Extraction_Layer)
 
 **이정호 (jungho0479)**  
 - GitHub: https://github.com/jungho0479
