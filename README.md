@@ -1,1 +1,1 @@
-# FSRCNN Accelerater based on FPGA(ZCU102)
+# FSRCNN-based Super-Resolution Accelerator on FPGA
