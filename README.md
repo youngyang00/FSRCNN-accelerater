@@ -1,4 +1,4 @@
-# FSRCNN-based Super-Resolution Accelerator on FPGA
+# FSRCNN-based Super-Resolution Accelerator on FPGA(ZCU-102)
 ## Contributor
 **신광선 (Gwangsun Shin)**  
 - GitHub: https://github.com/youngyang00
