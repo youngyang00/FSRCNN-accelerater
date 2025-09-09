@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="yconv_fifo_generator_0_synth_1" LaunchDir="C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.runs/yconv_fifo_generator_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

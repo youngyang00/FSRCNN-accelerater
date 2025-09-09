@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Sep  5 11:28:55 2025
+# Process ID: 23704
+# Current directory: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21088 D:\FSRCNN\ip_Repo\AXI4S_Feature_Extraction_Layer\AXI4S_Feature_Extraction_Layer.xpr
+# Log file: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/vivado.log
+# Journal file: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr
+update_compile_order -fileset sources_1

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="feature_dsp_Requant_synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1757037315">
+  <File Type="PA-TCL" Name="feature_dsp_Requant.tcl"/>
+  <File Type="REPORTS-TCL" Name="feature_dsp_Requant_reports.tcl"/>
+  <File Type="RDS-RDS" Name="feature_dsp_Requant.vds"/>
+  <File Type="RDS-UTIL" Name="feature_dsp_Requant_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="feature_dsp_Requant_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="feature_dsp_Requant.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/feature_dsp_Requant">
+    <File Path="$PSRCDIR/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="feature_dsp_Requant"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/feature_dsp_Requant">
+    <File Path="$PSRCDIR/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="feature_dsp_Requant"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

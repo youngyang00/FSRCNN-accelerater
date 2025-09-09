@@ -141,7 +141,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>98dc03a8</spirit:value>
+            <spirit:value>a26e4fc5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -166,7 +166,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>334e2cbd</spirit:value>
+            <spirit:value>fbde4e1c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -181,7 +181,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>739b42cd</spirit:value>
+            <spirit:value>5bd61d39</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -366,25 +366,25 @@
         <spirit:name>src/dsp_macro_0/dsp_macro_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/pe0/DSP0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/pe0/DSP0/dsp_macro_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/dsp_Requant/dsp_Requant.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/DSP_Requant</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/DSP_Requant/dsp_Requant</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/backBuffer</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/backBuffer/fifo_generator_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/line_buffer/line_buffer.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/Distributor/genblk1[0].LB0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/Distributor/genblk1[0].LB0/line_buffer</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/Axi4ConvCore.v</spirit:name>
@@ -454,25 +454,25 @@
         <spirit:name>src/dsp_macro_0/dsp_macro_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/pe0/DSP0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/pe0/DSP0/dsp_macro_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/dsp_Requant/dsp_Requant.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/DSP_Requant</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/pe_array0/DSP_Requant/dsp_Requant</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/backBuffer</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/backBuffer/fifo_generator_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/line_buffer/line_buffer.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_core_layer1/Distributor/genblk1[0].LB0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_core_layer1/Distributor/genblk1[0].LB0/line_buffer</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/Axi4ConvCore.v</spirit:name>
@@ -544,6 +544,12 @@
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>src/pixelArranger_behav.wcfg</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
@@ -576,13 +582,13 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-07-30T05:14:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>16</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-09-07T13:59:33Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1cb9a87e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="18365e38"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7d09670b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d6091170"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="7f285978"/>
     </xilinx:packagingInfo>

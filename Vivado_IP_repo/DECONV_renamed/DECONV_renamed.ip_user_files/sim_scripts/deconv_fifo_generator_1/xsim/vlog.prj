@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../DECONV_renamed.gen/sources_1/ip/deconv_fifo_generator_1/sim/deconv_fifo_generator_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Y_Converter_19.1.srcs/sources_1/ip/yconv_fifo_generator_0/sim/yconv_fifo_generator_0.v" \
+"../../../../Y_Converter_19.1.srcs/sources_1/imports/Desktop/yconv_pipelined_multiplier_2stage.v" \
+"../../../../Y_Converter_19.1.srcs/sources_1/imports/Desktop/Y_Converter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

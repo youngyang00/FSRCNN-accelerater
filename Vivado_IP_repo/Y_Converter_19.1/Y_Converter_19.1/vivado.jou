@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Sep  6 06:53:03 2025
+# Process ID: 4384
+# Current directory: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19852 C:\Users\josuh\Desktop\Projects\Capstone\Y_Converter_19.1\Y_Converter_19.1.xpr
+# Log file: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/vivado.log
+# Journal file: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.xpr
+update_compile_order -fileset sources_1

@@ -1,0 +1,18 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 69a74fc80da849aaa2ff2b5554357e1c --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Y_Converter_behav xil_defaultlib.Y_Converter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.yconv_pipelined_multiplier_2stag...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_s...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_p...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_CONV_VER(...
+Compiling module fifo_generator_v13_2_4.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.yconv_fifo_generator_0
+Compiling module xil_defaultlib.Y_Converter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Y_Converter_behav

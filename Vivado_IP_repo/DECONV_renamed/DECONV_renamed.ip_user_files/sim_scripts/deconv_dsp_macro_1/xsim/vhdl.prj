@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../DECONV_renamed.gen/sources_1/ip/deconv_dsp_macro_1/sim/deconv_dsp_macro_1.vhd" \
+
+nosort

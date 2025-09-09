@@ -1,0 +1,134 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Sep  5 11:10:08 2025
+| Host         : xylo running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Feature_Extraction_Layer_control_sets_placed.rpt
+| Design       : Feature_Extraction_Layer
+| Device       : xczu9eg
+-----------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    56 |
+|    Minimum number of control sets                        |    42 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |    14 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    56 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    23 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    21 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              49 |           29 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             192 |           61 |
+| Yes          | No                    | No                     |            1200 |          172 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             114 |           26 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                                        Enable Signal                                                        |                                                           Set/Reset Signal                                                          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  axi_clk_IBUF_BUFG | Line_Buffer/FSM_sequential_state_READ[1]_i_1_n_0                                                                            | Line_Buffer/o_valid0                                                                                                                |                2 |              2 |         1.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/eof_delay_cnt[1]_i_1_n_0                                                                                        | Line_Buffer/o_valid0                                                                                                                |                1 |              2 |         2.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/FSM_sequential_state_WRITE[2]_i_2_n_0                                                                           | Line_Buffer/o_valid0                                                                                                                |                2 |              3 |         1.50 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/WrNum                                                                                                           | Line_Buffer/o_valid0                                                                                                                |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/rdsubCnt                                                                                                        | Line_Buffer/o_valid0                                                                                                                |                2 |              3 |         1.50 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | Line_Buffer/o_addr_d[2]_i_1_n_0                                                                                                     |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/rdBase                                                                                                          | Line_Buffer/o_valid0                                                                                                                |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/fillNum[2]_i_1_n_0                                                                                              | Line_Buffer/o_valid0                                                                                                                |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | axi_reset_n_IBUF_inst/O                                                                                                             |                1 |              5 |         5.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | Line_Buffer/o_valid0                                                                                                                |                4 |              6 |         1.50 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe12/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                3 |              8 |         2.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | Line_Buffer/data_packed[31]_i_1_n_0                                                                                                 |                4 |              8 |         2.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | Line_Buffer/data_packed[39]_i_1_n_0                                                                                                 |                4 |              8 |         2.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | Line_Buffer/data_packed[7]_i_1_n_0                                                                                                  |                5 |              8 |         1.60 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe14/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe11/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe10/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                1 |              8 |         8.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe1/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe0/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                3 |              8 |         2.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe13/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe15/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                    |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe2/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                3 |              8 |         2.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe3/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                3 |              8 |         2.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe4/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe5/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe6/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                3 |              8 |         2.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe8/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe9/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | core_calculator/pe7/DSP_Requant/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive/P[34]                     |                1 |              8 |         8.00 |
+|  axi_clk_IBUF_BUFG | outYcnt[7]_i_1_n_0                                                                                                          | axi_reset_n_IBUF_inst/O                                                                                                             |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/rdYCnt                                                                                                          | Line_Buffer/o_valid0                                                                                                                |                2 |              9 |         4.50 |
+|  axi_clk_IBUF_BUFG | outXcnt0                                                                                                                    | axi_reset_n_IBUF_inst/O                                                                                                             |                2 |              9 |         4.50 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/WrLineNum                                                                                                       | Line_Buffer/o_valid0                                                                                                                |                3 |              9 |         3.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/rdCnt                                                                                                           | Line_Buffer/o_valid0                                                                                                                |                2 |             10 |         5.00 |
+|  axi_clk_IBUF_BUFG | Line_Buffer/wDataCnt_0                                                                                                      | Line_Buffer/o_valid0                                                                                                                |                2 |             10 |         5.00 |
+|  axi_clk_IBUF_BUFG | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                          | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                3 |             20 |         6.67 |
+|  axi_clk_IBUF_BUFG | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/ram_empty_fb_i_reg[0] | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                3 |             20 |         6.67 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN                                                                                        |                                                                                                                                     |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_4                                                                                      |                                                                                                                                     |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_10                                                                                     |                                                                                                                                     |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                9 |             26 |         2.89 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid                                                                                             |                                                                                                                                     |                6 |             43 |         7.17 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_5                                                                                      |                                                                                                                                     |                6 |             43 |         7.17 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_8                                                                                      |                                                                                                                                     |                6 |             43 |         7.17 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_9                                                                                      |                                                                                                                                     |                6 |             43 |         7.17 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_12                                                                                     |                                                                                                                                     |                6 |             43 |         7.17 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_6                                                                                      |                                                                                                                                     |                6 |             44 |         7.33 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_7                                                                                      |                                                                                                                                     |                6 |             44 |         7.33 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             |                                                                                                                                     |               29 |             50 |         1.72 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_11                                                                                     |                                                                                                                                     |                9 |             63 |         7.00 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_2                                                                                      |                                                                                                                                     |                9 |             64 |         7.11 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_1                                                                                      |                                                                                                                                     |                9 |             64 |         7.11 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_3                                                                                      |                                                                                                                                     |                9 |             64 |         7.11 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe0/w_dsp_valid_repN_13                                                                                     |                                                                                                                                     |                9 |             64 |         7.11 |
+|  axi_clk_IBUF_BUFG | backBuffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0]                  |                                                                                                                                     |               28 |            128 |         4.57 |
+|  axi_clk_IBUF_BUFG | core_calculator/pe15/E[0]                                                                                                   |                                                                                                                                     |               48 |            384 |         8.00 |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

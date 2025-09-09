@@ -1,0 +1,7 @@
+Running: xsim.dir/Expanding_Layer_behav/xsimk.exe -simmode gui -wdb Expanding_Layer_behav.wdb -simrunnum 0 -socket 63649
+Design successfully loaded
+Design Loading Memory Usage: 47440 KB (Peak: 47440 KB)
+Design Loading CPU Usage: 78 ms
+Simulation completed
+Simulation Memory Usage: 53668 KB (Peak: 53668 KB)
+Simulation CPU Usage: 108 ms

@@ -1,0 +1,7 @@
+Running: xsim.dir/Y_Converter_behav/xsimk.exe -simmode gui -wdb Y_Converter_behav.wdb -simrunnum 0 -socket 53334
+Design successfully loaded
+Design Loading Memory Usage: 8984 KB (Peak: 8984 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 9928 KB (Peak: 9928 KB)
+Simulation CPU Usage: 139 ms

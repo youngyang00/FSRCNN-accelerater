@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Sep  6 06:56:13 2025
+# Process ID: 19912
+# Current directory: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim/xsim.dir/Y_Converter_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim/xsim.dir/Y_Converter_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Sep  6 06:56:14 2025...

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_dsp_Requant/sim/feature_dsp_Requant.vhd" \
+
+nosort

@@ -4,5 +4,5 @@ xpm_VCOMP.vhd,vhdl,xpm,C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd,
 fifo_generator_vlog_beh.v,verilog,fifo_generator_v13_2_7,../../../ipstatic/simulation/fifo_generator_vlog_beh.v,
 fifo_generator_v13_2_rfs.vhd,vhdl,fifo_generator_v13_2_7,../../../ipstatic/hdl/fifo_generator_v13_2_rfs.vhd,
 fifo_generator_v13_2_rfs.v,verilog,fifo_generator_v13_2_7,../../../ipstatic/hdl/fifo_generator_v13_2_rfs.v,
-fifo_generator_0.v,verilog,xil_defaultlib,../../../../tmp_edit_project.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v,
+fifo_generator_0.v,verilog,xil_defaultlib,../../../../capstone/ip_repo/mappinglayer/tmp_edit_project.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v,
 glbl.v,Verilog,xil_defaultlib,glbl.v

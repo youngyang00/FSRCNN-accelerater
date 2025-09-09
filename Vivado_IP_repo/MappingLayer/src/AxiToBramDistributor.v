@@ -65,11 +65,10 @@ always @(posedge i_clk) begin
    if (!i_rstn | innerClr) begin
       wrCnt <= 'd1;
       WrNum <= 'd1;
-      fillNum <= 'd1;
+      // fillNum <= 'd1;
       WrLineNum <= 'd0;
    end
    else begin
-      if(rdCnt == 'd321 & ChannelSwitch) fillNum <= fillNum - 'd1;
       if (slave_transaction_on) begin
          if(wrCnt <= 'd319)begin
             wrCnt <= wrCnt + 'd1;
@@ -77,12 +76,66 @@ always @(posedge i_clk) begin
          else begin
             wrCnt <= 'd1;
             WrNum <= WrNum + 'd1;
-            fillNum <= fillNum + 'd1;
             WrLineNum <= WrLineNum + 'd1;
          end
       end
    end
 end
+
+always @(posedge i_clk) begin
+   if (!i_rstn | innerClr) begin
+      fillNum <= 'd1;
+   end
+   else begin
+      if (wrCnt=='d320 & slave_transaction_on) begin
+         if(rdCnt == 'd321 & ChannelSwitch)begin
+            fillNum <= fillNum;
+         end
+         else begin
+            fillNum <= fillNum + 'd1;
+         end
+      end
+      else begin
+         if (rdCnt == 'd321 & ChannelSwitch) begin
+            fillNum <= fillNum - 'd1;
+         end
+         else begin
+            fillNum <= fillNum;
+         end
+      end
+   end
+end
+
+// always @(posedge i_clk) begin
+//    if (!i_rstn | innerClr) begin
+//       wrCnt <= 'd1;
+//       WrNum <= 'd1;
+//       fillNum <= 'd1;
+//       WrLineNum <= 'd0;
+//    end
+//    else begin
+//       if (slave_transaction_on) begin
+//          if(wrCnt <= 'd319)begin
+//             wrCnt <= wrCnt + 'd1;
+//          end
+//          else begin
+//             wrCnt <= 'd1;
+//             WrNum <= WrNum + 'd1;
+//             if(rdCnt == 'd321 & ChannelSwitch)begin
+//                if(wrCnt == 'd320) fillNum <= fillNum;
+//                else fillNum <= fillNum -'d1;
+//             end
+//             else begin
+//                fillNum <= fillNum + 'd1;
+//             end
+//             WrLineNum <= WrLineNum + 'd1;
+//          end
+//       end
+//       else begin
+//          if(rdCnt == 'd321 & ChannelSwitch) fillNum <= fillNum - 'd1;
+//       end
+//    end
+// end
 
 always @(posedge i_clk) begin
    if(!i_rstn)begin
