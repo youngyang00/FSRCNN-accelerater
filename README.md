@@ -111,3 +111,91 @@ The IP uses a standard AXI4-Stream interface for pixel-level input and output, w
 - The IP does **not** buffer entire frames — streaming latency is only pipeline depth (~100–200 cycles).
 
 ---
+## 🧩 FSRCNN Core Architecture
+
+The FSRCNN accelerator is composed of six pipelined RTL modules, each representing a distinct layer in the FSRCNN architecture. All modules are interconnected via AXI4-Stream and synchronized under a common clock/reset domain (`s_axis_aclk`, `s_axis_aresetn`). The system is fully pipelined and supports streaming operation at one pixel per cycle after initial warm-up.
+
+<img width="2444" height="323" alt="image" src="https://github.com/user-attachments/assets/ff2c32c6-9035-4b79-8781-153e6683d7b5" />
+
+### 🔄 Data Flow
+
+S_AXIS (RGB) 
+   │
+   ▼
+[ Y_Converter ]
+   │
+   ▼
+[ Feature_Extraction ]
+   │
+   ▼
+[ Shrinking ]
+   │
+   ▼
+[ Mapping ]
+   │
+   ▼
+[ Expanding ]
+   │
+   ▼
+[ Deconvolution ]
+   │
+   ▼
+M_AXIS (Upscaled Y)
+
+- Y_Converter: Converts 32-bit RGB input (`{00, B, G, R}`) into 8-bit grayscale Y channel.  
+  Required because the FSRCNN IP processes only luminance (Y).
+
+- Feature → Deconvolution Layers: Core FSRCNN logic, divided into Verilog modules.  
+  Each of these layers is implemented as a separate AXI4-Stream IP core.
+
+- EOF / EOL Propagation: `EOF` (End-of-Frame) and `EOL` (End-of-Line) signals are passed through every stage to maintain correct spatial alignment and output timing.
+
+> 🧠 All inter-module interfaces follow AXI4-Stream protocol, supporting `tvalid`, `tready`, and custom `EOF`, `EOL` signals.  
+> Backpressure is supported at every stage to ensure data integrity under downstream stalls.
+
+> 📎 For detailed RTL implementation of each layer module, please refer to the individual GitHub repositories linked in the **Contributor** section above.
+
+
+## 🚀 Performance & Resource Utilization
+
+### 🕒 Timing Summary (300 MHz, ZCU102)
+
+The FSRCNN core meets all timing constraints when synthesized and implemented on Xilinx ZCU102 (UltraScale+). The design is fully pipelined and operates stably at **300 MHz**.
+
+- **Worst Negative Slack (WNS)**: 0.412 ns  
+- **Worst Hold Slack (WHS)**: 0.013 ns  
+- **Pulse Width Slack**: 1.124 ns  
+- **Status**: ✅ All timing constraints met
+
+<!-- 📷 Insert timing summary image here -->
+![Timing Summary](https://github.com/user-attachments/assets/14e972ec-4c45-425a-8cf7-94ae36224b08)
+---
+
+### 📈 Throughput
+
+- **Frame size**: 320×180 input → 1280×720 output (4× upscaling)  
+- **Clock frequency**: 300 MHz  
+- **Latency per frame**: ~**3.25 ms/frame**  
+- **Throughput**: Over **60 frames per second**  
+- **Effective throughput**: 1 pixel/clock after pipeline fill  
+- **Streaming model**: Fully pipelined AXI4-Stream architecture  
+- **Output timing**: Synchronized using `EOL` / `EOF` (propagated stage to stage)
+
+---
+
+### 🧮 Resource Utilization (Post-Implementation, Vivado)
+
+| Resource        | Used   | Available | Utilization |
+|----------------|--------|-----------|-------------|
+| CLB LUTs       | 41,859 | 274,080   | 15.3%       |
+| CLB Registers  | 29,920 | 548,160   | 5.5%        |
+| Block RAM Tiles| 96.5   | 912       | 10.6%       |
+| DSPs           | 1,513  | 2,520     | 60.0%       |
+| CARRY8         | 3,082  | 34,260    | 9.0%        |
+| Global Clocks  | 5      | 404       | 1.2%        |
+
+
+> 📌 Note: The **Mapping Layer** accounts for the majority of DSP usage (888 DSPs), due to its role in handling most of the compute-heavy convolution operations.
+
+
+
