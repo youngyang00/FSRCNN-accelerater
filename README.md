@@ -3,7 +3,7 @@
 **신광선 (Gwangsun Shin)**  
 - GitHub: https://github.com/youngyang00
 - Role: **Project Leader & Mapping Layer RTL Design & Design Verification based on SystemVerilog**  
-- Repo in Detail: https://github.com/youngyang00/fsrcnn-mapping-layer
+- Repo in Detail: https://github.com/youngyang00/FSRCNN-accelerator-mappingLayer
 
 **조수환 (suhwanJo03)**  
 - GitHub: https://github.com/suhwanJo03
