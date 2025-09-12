@@ -8,7 +8,7 @@
 **조수환 (suhwanJo03)**  
 - GitHub: https://github.com/suhwanJo03
 - Role: **Shrinking, Expanding Layer RTL Design & TCP transport FW design**
-- Repo in Detail:
+- Repo in Detail: https://github.com/suhwanJo03/FSRCNN_ZCU102_accelerator
   
 **이준식 (jun-sik Lee)**  
 - GitHub: https://github.com/dlwnstlr1010
@@ -18,7 +18,7 @@
 **이정호 (jungho0479)**  
 - GitHub: https://github.com/jungho0479
 - Role: **Deconvolution Layer RTL Design & software reference, quantization**
-- Repo in Detail: https://github.com/suhwanJo03/FSRCNN_ZCU102_accelerator
+- Repo in Detail: 
 
 
 ## Project Overview
