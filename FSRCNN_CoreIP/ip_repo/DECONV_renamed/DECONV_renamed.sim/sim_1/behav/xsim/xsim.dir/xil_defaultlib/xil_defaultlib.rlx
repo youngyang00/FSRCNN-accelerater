@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.gen/sources_1/ip/deconv_dsp_macro_1/sim/deconv_dsp_macro_1.vhd,1757057160,vhdl,,,,deconv_dsp_macro_1,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.gen/sources_1/ip/deconv_fifo_generator_1/sim/deconv_fifo_generator_1.v,1757057252,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sim_1/new/bram_sim.v,,deconv_fifo_generator_1,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sim_1/new/bram_sim.v,1757057374,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_PE.v,,bram_sim,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sim_1/new/deconv_tb_top.v,1757057317,verilog,,,,tb_top,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_PE.v,1757057047,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_linebuffer.v,,deconv_PE,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_linebuffer.v,1757057072,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_top.v,,deconv_xilinx_true_dual_port_no_change_1_clock_ram,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deconv_top.v,1757057378,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deonc_transposed_weight.v,,deconv_top,,,,,,,,
+C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sources_1/new/deonc_transposed_weight.v,1757057058,verilog,,C:/Users/jungh/vivado_jungho/DECONV_renamed/DECONV_renamed.srcs/sim_1/new/deconv_tb_top.v,,deconv_transposed_weight,,,,,,,,

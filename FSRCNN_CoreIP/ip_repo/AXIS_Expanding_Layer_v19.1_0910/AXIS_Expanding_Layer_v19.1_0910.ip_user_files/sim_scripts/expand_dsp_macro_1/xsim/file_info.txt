@@ -1,0 +1,2 @@
+expand_dsp_macro_1.vhd,vhdl,xil_defaultlib,../../../../AXIS_Expanding_Layer_v19.1_0910.gen/sources_1/ip/expand_dsp_macro_1/sim/expand_dsp_macro_1.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

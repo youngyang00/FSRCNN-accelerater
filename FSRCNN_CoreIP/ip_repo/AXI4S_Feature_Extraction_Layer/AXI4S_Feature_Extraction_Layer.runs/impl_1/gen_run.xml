@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1757038026">
+  <File Type="ROUTE-PWR" Name="Feature_Extraction_Layer_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Feature_Extraction_Layer.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Feature_Extraction_Layer_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Feature_Extraction_Layer_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="Feature_Extraction_Layer.msk"/>
+  <File Type="ROUTE-CLK" Name="Feature_Extraction_Layer_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Feature_Extraction_Layer.vdi"/>
+  <File Type="BG-BIT" Name="Feature_Extraction_Layer.bit"/>
+  <File Type="BG-DRC" Name="Feature_Extraction_Layer.drc"/>
+  <File Type="BG-BGN" Name="Feature_Extraction_Layer.bgn"/>
+  <File Type="BG-BIN" Name="Feature_Extraction_Layer.bin"/>
+  <File Type="BITSTR-RBT" Name="Feature_Extraction_Layer.rbt"/>
+  <File Type="BITSTR-NKY" Name="Feature_Extraction_Layer.nky"/>
+  <File Type="BITSTR-BMM" Name="Feature_Extraction_Layer_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Feature_Extraction_Layer.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Feature_Extraction_Layer_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="Feature_Extraction_Layer.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Feature_Extraction_Layer_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Feature_Extraction_Layer.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="Feature_Extraction_Layer_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Feature_Extraction_Layer.hwdef"/>
+  <File Type="PLACE-IO" Name="Feature_Extraction_Layer_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Feature_Extraction_Layer_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Feature_Extraction_Layer_utilization_placed.pb"/>
+  <File Type="ROUTE-RQS" Name="Feature_Extraction_Layer_routed.rqs"/>
+  <File Type="PLACE-CTRL" Name="Feature_Extraction_Layer_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Feature_Extraction_Layer_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-DRC" Name="Feature_Extraction_Layer_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Feature_Extraction_Layer_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Feature_Extraction_Layer_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Feature_Extraction_Layer_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Feature_Extraction_Layer_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="Feature_Extraction_Layer_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Feature_Extraction_Layer_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Feature_Extraction_Layer_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Feature_Extraction_Layer_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Feature_Extraction_Layer_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Feature_Extraction_Layer_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Feature_Extraction_Layer_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Feature_Extraction_Layer_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Feature_Extraction_Layer_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="Feature_Extraction_Layer_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="Feature_Extraction_Layer_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="Feature_Extraction_Layer_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Feature_Extraction_Layer_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Feature_Extraction_Layer_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Feature_Extraction_Layer_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Feature_Extraction_Layer_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="Feature_Extraction_Layer_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Feature_Extraction_Layer_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="Feature_Extraction_Layer.pdi"/>
+  <File Type="RCFI_FILE" Name="Feature_Extraction_Layer.rcfi"/>
+  <File Type="CFI_FILE" Name="Feature_Extraction_Layer.cfi"/>
+  <File Type="RNPI_FILE" Name="Feature_Extraction_Layer.rnpi"/>
+  <File Type="NPI_FILE" Name="Feature_Extraction_Layer.npi"/>
+  <File Type="RBD_FILE" Name="Feature_Extraction_Layer.rbd"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Feature_Extraction_Layer_postroute_physopted.rqs"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/feature_Line_Buffer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/feature_PE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/feature_PE_Array.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/feature_rom_40_ff_async.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Feature_Extraction_Layer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Feature_Extraction_Layer"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="feature_dsp_macro_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="feature_dsp_Requant"/>
+  <BlockFileSet Type="BlockSrcs" Name="feature_blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="feature_fifo_generator_0"/>
+</GenRun>

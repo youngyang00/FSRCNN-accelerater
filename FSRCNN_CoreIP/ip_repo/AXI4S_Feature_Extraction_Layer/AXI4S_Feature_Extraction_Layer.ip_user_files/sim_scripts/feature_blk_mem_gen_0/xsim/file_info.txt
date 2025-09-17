@@ -1,0 +1,2 @@
+feature_blk_mem_gen_0.v,verilog,xil_defaultlib,../../../../AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_blk_mem_gen_0/sim/feature_blk_mem_gen_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

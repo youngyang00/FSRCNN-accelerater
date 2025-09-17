@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Sep 18 00:22:46 2025
+# Process ID: 2560
+# Current directory: D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6888 D:\FSRCNN_CoreIP\ip_repo\FSRCNN_CoreIP\tmp_edit_project.xpr
+# Log file: D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/vivado.log
+# Journal file: D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/tmp_edit_project.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FSRCNN_CoreIP/ip_repo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/FSRCNN_CoreIP/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3571] IP 'fsrcnn_AXIS_Shrinking_Layer_0_0' is restricted:
+* IP definition 'AXIS_Shrinking_Layer_v19.1_0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:xbip_dsp48_macro:3.0
+WARNING: [IP_Flow 19-3571] IP 'fsrcnn_AXIS_Expanding_Layer_0_0' is restricted:
+* IP definition 'AXIS_Expanding_Layer_v19.1_0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:xbip_dsp48_macro:3.0
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1705.457 ; gain = 279.473
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {D:\FSRCNN_CoreIP\ip_repo\FSRCNN_CoreIP\component.xml}
+WARNING: [IP_Flow 19-4963] fsrcnn_deconv_top_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/sim/fsrcnn.v'.
+WARNING: [IP_Flow 19-5226] Project source file 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_ooc.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_deconv_top_0_0/fsrcnn_deconv_top_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_Feature_Extraction_L_0_0/fsrcnn_Feature_Extraction_L_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Y_Converter_0_0/fsrcnn_AXIS_Y_Converter_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Shrinking_Layer_0_0/fsrcnn_AXIS_Shrinking_Layer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Expanding_Layer_0_0/fsrcnn_AXIS_Expanding_Layer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_wrapper.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_deconv_top_0_0/fsrcnn_deconv_top_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_Feature_Extraction_L_0_0/fsrcnn_Feature_Extraction_L_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Y_Converter_0_0/fsrcnn_AXIS_Y_Converter_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Shrinking_Layer_0_0/fsrcnn_AXIS_Shrinking_Layer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_AXIS_Expanding_Layer_0_0/fsrcnn_AXIS_Expanding_Layer_0_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/src/fsrcnn_wrapper.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed from 'XPM_CDC,XPM_MEMORY' to ''
+set_property vendor {GwangSeon Sin} [ipx::current_core]
+set_property vendor GwangSeon_Sin [ipx::current_core]
+set_property name axi4s_fsrcnn_upscaler [ipx::current_core]
+set_property display_name {AXI4-Stream FSRCNN Upscale} [ipx::current_core]
+set_property description {AXI4-Stream FSRCNN Upscale} [ipx::current_core]
+set_property company_url https://github.com/youngyang00/FSRCNN-accelerater [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-4963] fsrcnn_deconv_top_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/sim/fsrcnn.v'.
+WARNING: [IP_Flow 19-5226] Project source file 'd:/FSRCNN_CoreIP/ip_repo/FSRCNN_CoreIP/component.xml' ignored by IP packager.
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces s_axis_aclk -of_objects [ipx::current_core]]
+set_property value M_AXIS [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces s_axis_aclk -of_objects [ipx::current_core]]]
+set_property value M_AXIS:S_AXIS [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces s_axis_aclk -of_objects [ipx::current_core]]]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/FSRCNN_CoreIP/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FSRCNN_CoreIP/ip_repo'
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 18 00:27:08 2025...

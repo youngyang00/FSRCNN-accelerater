@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../tmp_edit_project.gen/sources_1/ip/line_buffer/sim/line_buffer.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

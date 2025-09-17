@@ -1,0 +1,127 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Sep  5 16:37:08 2025
+| Host         : jungho_idsl running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file deconv_top_control_sets_placed.rpt
+| Design       : deconv_top
+| Device       : xczu9eg
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    23 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    41 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |            2937 |          425 |
+| No           | Yes                   | No                     |             435 |          124 |
+| Yes          | No                    | No                     |             576 |          206 |
+| Yes          | No                    | Yes                    |            3280 |          659 |
+| Yes          | Yes                   | No                     |             296 |           74 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                          Enable Signal                                         |                                     Set/Reset Signal                                     | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  axi_clk_IBUF_BUFG |                                                                                                |                                                                                          |                1 |              1 |         1.00 |
+|  axi_clk_IBUF_BUFG | pattern_addr[1]_i_1_n_0                                                                        | axi_reset_n_IBUF_inst/O                                                                  |                1 |              2 |         2.00 |
+|  axi_clk_IBUF_BUFG | pause11_out                                                                                    | axi_reset_n_IBUF_inst/O                                                                  |                1 |              2 |         2.00 |
+|  axi_clk_IBUF_BUFG | ena_3                                                                                          | axi_reset_n_IBUF_inst/O                                                                  |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG | fifo_y_cnt[9]_i_1_n_0                                                                          | axi_reset_n_IBUF_inst/O                                                                  |                2 |             10 |         5.00 |
+|  axi_clk_IBUF_BUFG | bram_y_cnt0                                                                                    | axi_reset_n_IBUF_inst/O                                                                  |                5 |             11 |         2.20 |
+|  axi_clk_IBUF_BUFG | fifo_x_cnt0                                                                                    | axi_reset_n_IBUF_inst/O                                                                  |                3 |             11 |         3.67 |
+|  axi_clk_IBUF_BUFG | sel                                                                                            | axi_reset_n_IBUF_inst/O                                                                  |                4 |             15 |         3.75 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[15].deconv/tree_2_1[15]_i_1__14_n_0                                              |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[9].deconv/tree_2_1[15]_i_1__8_n_0                                                |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[13].deconv/tree_2_1[15]_i_1__12_n_0                                              |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[10].deconv/tree_2_1[15]_i_1__9_n_0                                               |                5 |             16 |         3.20 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[0].deconv/tree_2_1[15]_i_1_n_0                                                   |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[12].deconv/tree_2_1[15]_i_1__11_n_0                                              |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[2].deconv/tree_2_1[15]_i_1__1_n_0                                                |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[1].deconv/tree_2_1[15]_i_1__0_n_0                                                |                5 |             16 |         3.20 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[11].deconv/tree_2_1[15]_i_1__10_n_0                                              |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[14].deconv/tree_2_1[15]_i_1__13_n_0                                              |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[5].deconv/tree_2_1[15]_i_1__4_n_0                                                |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[4].deconv/tree_2_1[15]_i_1__3_n_0                                                |                5 |             16 |         3.20 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[8].deconv/tree_2_1[15]_i_1__7_n_0                                                |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[7].deconv/tree_2_1[15]_i_1__6_n_0                                                |                4 |             16 |         4.00 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[6].deconv/tree_2_1[15]_i_1__5_n_0                                                |                5 |             16 |         3.20 |
+|  axi_clk_IBUF_BUFG | axi_reset_n_IBUF_inst/O                                                                        | genblk1[3].deconv/tree_2_1[15]_i_1__2_n_0                                                |                5 |             16 |         3.20 |
+|  axi_clk_IBUF_BUFG | inst_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0] | inst_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/g8serrst.usrst_inst/srst_full_ff_i |                3 |             20 |         6.67 |
+|  axi_clk_IBUF_BUFG | inst_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0]   | inst_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/g8serrst.usrst_inst/srst_full_ff_i |                3 |             20 |         6.67 |
+|  axi_clk_IBUF_BUFG |                                                                                                | inst_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/g8serrst.usrst_inst/srst_full_ff_i |                7 |             25 |         3.57 |
+|  axi_clk_IBUF_BUFG | genblk1[8].deconv/mul_ready                                                                    |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[7].deconv/mul_ready                                                                    |                                                                                          |               12 |             36 |         3.00 |
+|  axi_clk_IBUF_BUFG | genblk1[6].deconv/mul_ready                                                                    |                                                                                          |               14 |             36 |         2.57 |
+|  axi_clk_IBUF_BUFG | genblk1[3].deconv/mul_ready                                                                    |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[0].deconv/mul_ready                                                                    |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[10].deconv/mul_ready                                                                   |                                                                                          |               15 |             36 |         2.40 |
+|  axi_clk_IBUF_BUFG | genblk1[15].deconv/mul_ready                                                                   |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[12].deconv/mul_ready                                                                   |                                                                                          |               15 |             36 |         2.40 |
+|  axi_clk_IBUF_BUFG | genblk1[2].deconv/mul_ready                                                                    |                                                                                          |               15 |             36 |         2.40 |
+|  axi_clk_IBUF_BUFG | genblk1[9].deconv/mul_ready                                                                    |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[1].deconv/mul_ready                                                                    |                                                                                          |               15 |             36 |         2.40 |
+|  axi_clk_IBUF_BUFG | genblk1[11].deconv/mul_ready                                                                   |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[13].deconv/mul_ready                                                                   |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[14].deconv/mul_ready                                                                   |                                                                                          |               12 |             36 |         3.00 |
+|  axi_clk_IBUF_BUFG | genblk1[5].deconv/mul_ready                                                                    |                                                                                          |               13 |             36 |         2.77 |
+|  axi_clk_IBUF_BUFG | genblk1[4].deconv/mul_ready                                                                    |                                                                                          |               15 |             36 |         2.40 |
+|  axi_clk_IBUF_BUFG | s_data_keep0                                                                                   | axi_reset_n_IBUF_inst/O                                                                  |               36 |            128 |         3.56 |
+|  axi_clk_IBUF_BUFG | window_in_0                                                                                    | axi_reset_n_IBUF_inst/O                                                                  |              129 |            384 |         2.98 |
+|  axi_clk_IBUF_BUFG |                                                                                                | weight_en                                                                                |              117 |            410 |         3.50 |
+|  axi_clk_IBUF_BUFG | window_in_valid_reg_n_0                                                                        | axi_reset_n_IBUF_inst/O                                                                  |              371 |           1152 |         3.11 |
+|  axi_clk_IBUF_BUFG | genblk1[15].deconv/E[0]                                                                        | axi_reset_n_IBUF_inst/O                                                                  |              452 |           1562 |         3.46 |
+|  axi_clk_IBUF_BUFG |                                                                                                | axi_reset_n_IBUF_inst/O                                                                  |              425 |           2937 |         6.91 |
++--------------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

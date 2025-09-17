@@ -1,0 +1,12 @@
+
+{ 
+    crc :  18045571497406067483  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L fifo_generator_v13_2_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl" , 
+    buildDate : "Oct 14 2022" , 
+    buildTime : "05:20:55" , 
+    linkCmd : "C:\\XilinxNew\\Vivado\\2022.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_top_behav/xsimk.exe\"   \"xsim.dir/tb_top_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_top_behav/obj/xsim_1.win64.obj\" \"xsim.dir/tb_top_behav/obj/xsim_2.win64.obj\" \"xsim.dir/tb_top_behav/obj/xsim_3.win64.obj\" \"xsim.dir/tb_top_behav/obj/xsim_4.win64.obj\" -L\"C:\\XilinxNew\\Vivado\\2022.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

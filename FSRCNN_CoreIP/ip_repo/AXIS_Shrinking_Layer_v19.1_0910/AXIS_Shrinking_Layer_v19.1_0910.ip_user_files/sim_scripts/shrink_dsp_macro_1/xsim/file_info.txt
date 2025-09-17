@@ -1,0 +1,2 @@
+shrink_dsp_macro_1.vhd,vhdl,xil_defaultlib,../../../../AXIS_Shrinking_Layer_v19.1_0910.gen/sources_1/ip/shrink_dsp_macro_1/sim/shrink_dsp_macro_1.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

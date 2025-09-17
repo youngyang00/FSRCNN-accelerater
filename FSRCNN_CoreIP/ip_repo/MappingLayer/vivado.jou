@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Sep  7 22:58:50 2025
+# Process ID: 17088
+# Current directory: D:/FSRCNN_imple2/ip_repo/MappingLayer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21632 D:\FSRCNN_imple2\ip_repo\MappingLayer\tmp_edit_project.xpr
+# Log file: D:/FSRCNN_imple2/ip_repo/MappingLayer/vivado.log
+# Journal file: D:/FSRCNN_imple2/ip_repo/MappingLayer\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/FSRCNN_imple2/ip_repo/MappingLayer/tmp_edit_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {D:\FSRCNN_imple2\ip_repo\MappingLayer\component.xml}
+set_property core_revision 16 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/FSRCNN_imple2/ip_repo/MappingLayer

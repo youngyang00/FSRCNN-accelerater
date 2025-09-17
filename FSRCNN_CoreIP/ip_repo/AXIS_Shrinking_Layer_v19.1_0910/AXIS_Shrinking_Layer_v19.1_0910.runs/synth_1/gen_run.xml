@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1757596582">
+  <File Type="PA-TCL" Name="Shrinking_Layer.tcl"/>
+  <File Type="REPORTS-TCL" Name="Shrinking_Layer_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Shrinking_Layer.vds"/>
+  <File Type="RDS-UTIL" Name="Shrinking_Layer_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Shrinking_Layer_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Shrinking_Layer.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/imports/shrink_Adder_Tree.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Shrinking_Layer_19.1/Shrinking_Layer_19.1.srcs/sources_1/imports/shrink_Adder_Tree.v"/>
+        <Attr Name="ImportTime" Val="1757040220"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/shrink_Convolution.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Shrinking_Layer_19.1/Shrinking_Layer_19.1.srcs/sources_1/imports/shrink_Convolution.v"/>
+        <Attr Name="ImportTime" Val="1757317872"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/shrink_Multiplier_DSP.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Shrinking_Layer_19.1/Shrinking_Layer_19.1.srcs/sources_1/imports/shrink_Multiplier_DSP.v"/>
+        <Attr Name="ImportTime" Val="1757156250"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/shrink_pipelined_multiplier_2stage.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Shrinking_Layer_19.1/Shrinking_Layer_19.1.srcs/sources_1/imports/shrink_pipelined_multiplier_2stage.v"/>
+        <Attr Name="ImportTime" Val="1757039014"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/Shrinking_Layer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Shrinking_Layer_19.1/Shrinking_Layer_19.1.srcs/sources_1/imports/Shrinking_Layer.v"/>
+        <Attr Name="ImportTime" Val="1757317430"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Shrinking_Layer"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="shrink_dsp_macro_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="shrink_fifo_generator_1"/>
+</GenRun>

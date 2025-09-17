@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../tmp_edit_project.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../tmp_edit_project.gen/sources_1/ip/line_buffer/sim/line_buffer.v" \
+
+verilog   \
+"../../../../src/Axi4ConvCore.v" \
+"../../../../src/AxiMappingLayerTop.v" \
+"../../../../src/AxiToBramDistributor.v" \
+"../../../../src/PE.v" \
+"../../../../src/PE_Array.v" \
+"../../../../src/rom_weights.v" \
+
+sv   \
+"../../../../src/test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

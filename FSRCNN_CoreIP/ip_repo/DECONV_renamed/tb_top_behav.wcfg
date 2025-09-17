@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="37,663.100 ns"></ZoomStartTime>
+      <ZoomEndTime time="40,193.101 ns"></ZoomEndTime>
+      <Cursor1Time time="38,055.100 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/bram_act_addr" type="array">
+      <obj_property name="ElementShortName">bram_act_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_act_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/s_valid" type="logic">
+      <obj_property name="ElementShortName">s_valid</obj_property>
+      <obj_property name="ObjectShortName">s_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/s_ready" type="logic">
+      <obj_property name="ElementShortName">s_ready</obj_property>
+      <obj_property name="ObjectShortName">s_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/s_data" type="array">
+      <obj_property name="ElementShortName">s_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/m_ready" type="logic">
+      <obj_property name="ElementShortName">m_ready</obj_property>
+      <obj_property name="ObjectShortName">m_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/m_valid" type="logic">
+      <obj_property name="ElementShortName">m_valid</obj_property>
+      <obj_property name="ObjectShortName">m_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/m_data" type="array">
+      <obj_property name="ElementShortName">m_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/dout" type="array">
+      <obj_property name="ElementShortName">dout[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/delay" type="array">
+      <obj_property name="ElementShortName">delay[1:0]</obj_property>
+      <obj_property name="ObjectShortName">delay[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/check_output" type="array">
+      <obj_property name="ElementShortName">check_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">check_output[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
+   </wvobject>
+</wave_config>

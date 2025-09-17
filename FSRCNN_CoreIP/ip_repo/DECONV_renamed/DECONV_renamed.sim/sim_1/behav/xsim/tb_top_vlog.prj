@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../DECONV_renamed.gen/sources_1/ip/deconv_fifo_generator_1/sim/deconv_fifo_generator_1.v" \
+"../../../../DECONV_renamed.srcs/sim_1/new/bram_sim.v" \
+"../../../../DECONV_renamed.srcs/sources_1/new/deconv_PE.v" \
+"../../../../DECONV_renamed.srcs/sources_1/new/deconv_linebuffer.v" \
+"../../../../DECONV_renamed.srcs/sources_1/new/deconv_top.v" \
+"../../../../DECONV_renamed.srcs/sources_1/new/deonc_transposed_weight.v" \
+"../../../../DECONV_renamed.srcs/sim_1/new/deconv_tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

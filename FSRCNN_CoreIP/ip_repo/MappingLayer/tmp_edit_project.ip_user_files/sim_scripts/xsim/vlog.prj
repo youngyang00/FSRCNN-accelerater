@@ -1,0 +1,16 @@
+verilog xil_defaultlib  \
+"../../../../../../mapping_layer/mapping_layer.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../../../mapping_layer/mapping_layer.gen/sources_1/ip/line_buffer/sim/line_buffer.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/Axi4ConvCore.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/AxiMappingLayerTop.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/AxiToBramDistributor.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/PE.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/PE_Array.v" \
+"../../../../../../mapping_layer/mapping_layer.srcs/sources_1/rom_weights.v" \
+
+sv xil_defaultlib  \
+"../../../../../../mapping_layer/mapping_layer.srcs/sim_1/SystemVerilog/test.sv" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

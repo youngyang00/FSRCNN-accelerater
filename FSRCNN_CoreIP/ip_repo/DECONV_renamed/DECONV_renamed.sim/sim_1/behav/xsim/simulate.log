@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+WARNING: Too many words specified in data file C:/Users/jungh/IDSL/Capstone/FSRCNN-pytorch/output_txt/outputs/layer7_expand_output_hex_reversed.txt
+INFO: xsimkernel Simulation Memory Usage: 61008 KB (Peak: 61008 KB), Simulation CPU Usage: 10264 ms

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep 10 13:34:30 2025
+# Process ID: 19716
+# Current directory: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910/AXIS_Expanding_Layer_v19.1_0910.runs/synth_1
+# Command line: vivado.exe -log Expanding_Layer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Expanding_Layer.tcl
+# Log file: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910/AXIS_Expanding_Layer_v19.1_0910.runs/synth_1/Expanding_Layer.vds
+# Journal file: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910/AXIS_Expanding_Layer_v19.1_0910.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Expanding_Layer.tcl -notrace
