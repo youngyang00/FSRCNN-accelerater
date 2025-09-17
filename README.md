@@ -61,7 +61,8 @@ To deploy the FSRCNN model efficiently on FPGA, we designed a lightweight and qu
 > Designed to process 320×180 input and produce 1280×720 output at 60 fps on ZCU102 (300 MHz).  
 > Steady-state throughput: 1 pixel per clock cycle after pipeline warm-up.
 
-<img width="590" height="367" alt="image" src="https://github.com/user-attachments/assets/ee3fe802-d791-45c7-9985-8d35039532f1" />
+<img width="571" height="326" alt="image" src="https://github.com/user-attachments/assets/26ed0da5-ffce-450e-a5ff-1d7b9b86bda3" />
+
 
 ### 📌 Description
 
