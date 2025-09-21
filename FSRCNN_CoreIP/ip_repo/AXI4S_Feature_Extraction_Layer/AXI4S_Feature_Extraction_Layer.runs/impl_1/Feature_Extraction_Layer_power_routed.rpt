@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri Sep  5 11:10:58 2025
+| Date             : Fri Sep 12 14:03:37 2025
 | Host             : xylo running 64-bit major release  (build 9200)
 | Command          : report_power -file Feature_Extraction_Layer_power_routed.rpt -pb Feature_Extraction_Layer_power_summary_routed.pb -rpx Feature_Extraction_Layer_power_routed.rpx
 | Design           : Feature_Extraction_Layer
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.196        |
+| Total On-Chip Power (W)  | 1.193        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.572        |
+| Dynamic (W)              | 0.570        |
 | Device Static (W)        | 0.623        |
 | Effective TJA (C/W)      | 1.0          |
 | Max Ambient (C)          | 98.8         |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.019 |        3 |       --- |             --- |
-| CLB Logic               |     0.061 |     5508 |       --- |             --- |
-|   LUT as Logic          |     0.059 |     2302 |    274080 |            0.84 |
+| Clocks                  |     0.018 |        3 |       --- |             --- |
+| CLB Logic               |     0.059 |     5528 |       --- |             --- |
+|   LUT as Logic          |     0.056 |     2316 |    274080 |            0.85 |
 |   CARRY8                |     0.002 |      150 |     34260 |            0.44 |
-|   Register              |    <0.001 |     1555 |    548160 |            0.28 |
+|   Register              |    <0.001 |     1559 |    548160 |            0.28 |
 |   LUT as Shift Register |    <0.001 |        1 |    144000 |           <0.01 |
 |   Others                |     0.000 |      284 |       --- |             --- |
-| Signals                 |     0.098 |     5890 |       --- |             --- |
-| Block RAM               |     0.017 |        7 |       912 |            0.77 |
-| DSPs                    |     0.249 |       96 |      2520 |            3.81 |
-| I/O                     |     0.128 |      144 |       328 |           43.90 |
+| Signals                 |     0.097 |     5911 |       --- |             --- |
+| Block RAM               |     0.019 |        7 |       912 |            0.77 |
+| DSPs                    |     0.250 |       96 |      2520 |            3.81 |
+| I/O                     |     0.126 |      144 |       328 |           43.90 |
 | Static Power            |     0.623 |          |           |                 |
-| Total                   |     1.196 |          |           |                 |
+| Total                   |     1.193 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,14 +74,14 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.704 |       0.522 |      0.183 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.703 |       0.520 |      0.183 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.040 |       0.004 |      0.035 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.004 |       0.001 |      0.003 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.194 |       0.000 |      0.194 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.064 |       0.032 |      0.033 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.064 |       0.031 |      0.033 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18          |       1.800 |     0.038 |       0.038 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.037 |       0.037 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -161,8 +161,8 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Feature_Extraction_Layer    |     0.572 |
-|   Line_Buffer               |     0.038 |
+| Feature_Extraction_Layer    |     0.570 |
+|   Line_Buffer               |     0.041 |
 |     GEN_LBUF[0].line_buffer |     0.002 |
 |       U0                    |     0.002 |
 |     GEN_LBUF[1].line_buffer |     0.002 |
@@ -173,13 +173,13 @@ Table of Contents
 |       U0                    |     0.002 |
 |     GEN_LBUF[4].line_buffer |     0.002 |
 |       U0                    |     0.002 |
-|     GEN_LBUF[5].line_buffer |     0.001 |
-|       U0                    |     0.001 |
+|     GEN_LBUF[5].line_buffer |     0.002 |
+|       U0                    |     0.002 |
 |   backBuffer                |     0.014 |
 |     U0                      |     0.014 |
 |       inst_fifo_gen         |     0.014 |
-|   core_calculator           |     0.392 |
-|     pe0                     |     0.026 |
+|   core_calculator           |     0.388 |
+|     pe0                     |     0.025 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
@@ -190,37 +190,37 @@ Table of Contents
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
-|       DSP4                  |     0.003 |
+|       DSP4                  |     0.004 |
 |     pe10                    |     0.025 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.004 |
-|     pe11                    |     0.024 |
-|       DSP0                  |     0.004 |
-|       DSP1                  |     0.003 |
-|       DSP2                  |     0.003 |
-|       DSP3                  |     0.003 |
-|       DSP4                  |     0.003 |
-|     pe12                    |     0.024 |
-|       DSP0                  |     0.004 |
-|       DSP1                  |     0.003 |
-|       DSP2                  |     0.003 |
-|       DSP3                  |     0.003 |
-|       DSP4                  |     0.003 |
-|     pe13                    |     0.025 |
+|     pe11                    |     0.025 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.004 |
-|     pe14                    |     0.025 |
+|     pe12                    |     0.024 |
+|       DSP0                  |     0.004 |
+|       DSP1                  |     0.004 |
+|       DSP2                  |     0.003 |
+|       DSP3                  |     0.003 |
+|       DSP4                  |     0.003 |
+|     pe13                    |     0.024 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.003 |
+|     pe14                    |     0.024 |
+|       DSP0                  |     0.004 |
+|       DSP1                  |     0.003 |
+|       DSP2                  |     0.003 |
+|       DSP3                  |     0.003 |
+|       DSP4                  |     0.004 |
 |     pe15                    |     0.024 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
@@ -245,36 +245,36 @@ Table of Contents
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.003 |
-|     pe5                     |     0.024 |
+|     pe5                     |     0.025 |
+|       DSP0                  |     0.004 |
+|       DSP1                  |     0.004 |
+|       DSP2                  |     0.003 |
+|       DSP3                  |     0.003 |
+|       DSP4                  |     0.003 |
+|     pe6                     |     0.024 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.003 |
-|     pe6                     |     0.025 |
-|       DSP0                  |     0.004 |
-|       DSP1                  |     0.003 |
-|       DSP2                  |     0.003 |
-|       DSP3                  |     0.004 |
-|       DSP4                  |     0.004 |
-|     pe7                     |     0.025 |
+|     pe7                     |     0.024 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.004 |
-|     pe8                     |     0.025 |
+|     pe8                     |     0.024 |
 |       DSP0                  |     0.004 |
 |       DSP1                  |     0.003 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
 |       DSP4                  |     0.003 |
-|     pe9                     |     0.024 |
+|     pe9                     |     0.025 |
 |       DSP0                  |     0.004 |
-|       DSP1                  |     0.003 |
+|       DSP1                  |     0.004 |
 |       DSP2                  |     0.003 |
 |       DSP3                  |     0.003 |
-|       DSP4                  |     0.004 |
+|       DSP4                  |     0.003 |
 +-----------------------------+-----------+
 
 

@@ -1,7 +1,0 @@
-Running: xsim.dir/Shrinking_Layer_behav/xsimk.exe -simmode gui -wdb Shrinking_Layer_behav.wdb -simrunnum 0 -socket 49480
-Design successfully loaded
-Design Loading Memory Usage: 46880 KB (Peak: 46880 KB)
-Design Loading CPU Usage: 92 ms
-Simulation completed
-Simulation Memory Usage: 53100 KB (Peak: 53100 KB)
-Simulation CPU Usage: 124 ms

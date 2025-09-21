@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/impl_1/Feature_Extraction_Layer.tcl"
+  variable script "C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/impl_1/Feature_Extraction_Layer.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -130,20 +131,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/wt [current_project]
-  set_property parent.project_path C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr [current_project]
-  set_property ip_output_repo C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/wt [current_project]
+  set_property parent.project_path C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr [current_project]
+  set_property ip_repo_paths C:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer [current_project]
+  update_ip_catalog
+  set_property ip_output_repo C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/synth_1/Feature_Extraction_Layer.dcp
-  read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci
-  read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci
-  read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci
-  read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci
+  add_files -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/synth_1/Feature_Extraction_Layer.dcp
+  read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci
+  read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci
+  read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci
+  read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/submit/AXI4S_Feature_Extraction_Layer/constraints.xdc
+  read_xdc C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

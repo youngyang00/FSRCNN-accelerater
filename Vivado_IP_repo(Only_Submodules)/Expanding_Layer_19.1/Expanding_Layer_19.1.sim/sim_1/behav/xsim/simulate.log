@@ -1,3 +1,0 @@
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-WARNING: File D:/FSRCNN/input_data/weight_verilog/mid_part_15_weight_hex_rearranged.txt referenced on C:/Users/josuh/Desktop/Projects/Capstone/FSRCNN_IPs_19.1/Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/expand_Convolution.v at line 42 cannot be opened for reading. Please ensure that this file is available in the current working directory.

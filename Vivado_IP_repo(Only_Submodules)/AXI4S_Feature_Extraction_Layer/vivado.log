@@ -2,16 +2,16 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Sep  5 23:49:44 2025
-# Process ID: 8124
-# Current directory: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9452 D:\FSRCNN\ip_Repo\AXI4S_Feature_Extraction_Layer\AXI4S_Feature_Extraction_Layer.xpr
-# Log file: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/vivado.log
-# Journal file: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer\vivado.jou
-# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+# Start of session at: Mon Sep 15 01:41:38 2025
+# Process ID: 7368
+# Current directory: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11244 C:\emergency\FSRCNN_imple2.vol1\ip_repo\AXI4S_Feature_Extraction_Layer\AXI4S_Feature_Extraction_Layer.xpr
+# Log file: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/vivado.log
+# Journal file: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer\vivado.jou
+# Running On: xylo, OS: Windows, CPU Frequency: 4350 MHz, CPU Physical cores: 12, Host memory: 33382 MB
 #-----------------------------------------------------------
 start_gui
-open_project D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr
+open_project C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
@@ -24,58 +24,65 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 avail
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1789.875 ; gain = 370.953
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1763.250 ; gain = 360.402
 update_compile_order -fileset sources_1
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-set_property CONFIG.Write_Depth_A {1024} [get_ips feature_blk_mem_gen_0]
-generate_target all [get_files  D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'feature_blk_mem_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'feature_blk_mem_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'feature_blk_mem_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'feature_blk_mem_gen_0'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'feature_blk_mem_gen_0'...
-catch { config_ip_cache -export [get_ips -all feature_blk_mem_gen_0] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: feature_blk_mem_gen_0
-export_ip_user_files -of_objects [get_files D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci] -no_script -sync -force -quiet
-reset_run feature_blk_mem_gen_0_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/feature_blk_mem_gen_0_synth_1
-
-launch_runs feature_blk_mem_gen_0_synth_1 -jobs 12
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: feature_blk_mem_gen_0
-[Fri Sep  5 23:50:50 2025] Launched feature_blk_mem_gen_0_synth_1...
-Run output will be captured here: D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/feature_blk_mem_gen_0_synth_1/runme.log
-export_simulation -of_objects [get_files D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci] -directory D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files/sim_scripts -ip_user_files_dir D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files -ipstatic_source_dir D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/modelsim} {questa=D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/questa} {riviera=D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/riviera} {activehdl=D:/FSRCNN/ip_Repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-ipx::open_ipxact_file {D:\FSRCNN\ip_Repo\axi4s_feature_extraction_layer\component.xml}
-WARNING: [IP_Flow 19-5226] Project source file 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/constraints.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
-WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed fexit
-INFO: [Common 17-206] Exiting Vivado at Sat Sep  6 00:36:02 2025...
-rent_core]
+ipx::open_ipxact_file {C:\emergency\FSRCNN_imple2.vol1\ip_repo\axi4s_feature_extraction_layer\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/constraints.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed from 'XPM_CDC,XPM_MEMORY' to ''
+ipx::merge_project_changes ports [ipx::current_core]
 WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
-WARNING: [IP_Flow 19-5226] Project source file 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
-set_property core_revision 8 [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::unload_core c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml
+ipx::open_ipxact_file {C:\emergency\FSRCNN_imple2.vol1\ip_repo\axi4s_feature_extraction_layer\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/constraints.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed from 'XPM_CDC,XPM_MEMORY' to ''
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+set_property core_revision 13 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::check_integrity [ipx::current_core]
@@ -84,7 +91,200 @@ INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
 INFO: [IP_Flow 19-2187] The Product Guide file is missing.
 INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
 ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path d:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer
-INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FSRCNN/ip_Repo/axi4s_feature_extraction_layer'
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::unload_core c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml
+ipx::open_ipxact_file {C:\emergency\FSRCNN_imple2.vol1\ip_repo\axi4s_feature_extraction_layer\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/constraints.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed from 'XPM_CDC,XPM_MEMORY' to ''
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+set_property core_revision 14 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 15 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 16 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::unload_core c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml
+set_property -dict [list \
+  CONFIG.Enable_Data_Counts_axis {true} \
+  CONFIG.Input_Depth_axis {4096} \
+] [get_ips feature_fifo_generator_0]
+generate_target all [get_files  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'feature_fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'feature_fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'feature_fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'feature_fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all feature_fifo_generator_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: feature_fifo_generator_0
+export_ip_user_files -of_objects [get_files C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci] -no_script -sync -force -quiet
+reset_run feature_fifo_generator_0_synth_1
+launch_runs feature_fifo_generator_0_synth_1 -jobs 12
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: feature_fifo_generator_0
+[Tue Sep 16 14:19:23 2025] Launched feature_fifo_generator_0_synth_1...
+Run output will be captured here: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/feature_fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci] -directory C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files/sim_scripts -ip_user_files_dir C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files -ipstatic_source_dir C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/modelsim} {questa=C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/questa} {riviera=C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/riviera} {activehdl=C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::open_ipxact_file {C:\emergency\FSRCNN_imple2.vol1\ip_repo\axi4s_feature_extraction_layer\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/constraints.xdc' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-5897] The set of required XPM macros has changed from 'XPM_CDC,XPM_MEMORY' to ''
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+set_property core_revision 17 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 18 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 19 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 20 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] feature_dsp_macro_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu102:part0:3.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 21 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of ''. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer'
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Sep  5 23:58:39 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 19 12:40:52 2025...

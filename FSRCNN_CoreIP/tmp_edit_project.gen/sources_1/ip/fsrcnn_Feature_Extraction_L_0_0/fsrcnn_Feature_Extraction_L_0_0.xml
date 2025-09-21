@@ -541,7 +541,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreRevision>21</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_CLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
@@ -579,7 +579,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c84ab487"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="678e5cf8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="999ddb37"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="acf36da2"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="ee3c50ac"/>
     </xilinx:packagingInfo>

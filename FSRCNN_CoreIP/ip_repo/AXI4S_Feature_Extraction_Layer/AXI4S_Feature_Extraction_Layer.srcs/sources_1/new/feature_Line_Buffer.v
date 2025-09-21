@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //2025.09.17 14:30
 module feature_Line_Buffer (
     input  wire         i_clk,
     input  wire         i_rstn,
@@ -60,18 +60,20 @@ module feature_Line_Buffer (
 
     reg [2:0]           o_addr_d;
 
-    reg [1:0]           eof_delay_cnt;
+    reg                 clr_masking;
+    reg                 clr_masking_d;
 
     localparam          WRITE_IDLE          = 'd0,
                         WRITE_ON            = 'd1,
                         WRITE_BLOCK         = 'd2,
-                        WRITE_PAUSE         = 'd3,
+                        WRITE_PAUSE         = 'd3, //for reading
                         WRITE_DONE          = 'd4;
 
     localparam          READ_IDLE           = 'd0,
                         READ_ON             = 'd1,
-                        READ_EOF_DELAY      = 'd2,
-                        READ_CLR            = 'd3;
+                        READ_BLOCK          = 'd2,
+                        READ_EOF_DELAY      = 'd3,
+                        READ_CLR            = 'd4;
 
     always @(posedge i_clk) begin
         if (~i_rstn | innerClr) begin
@@ -93,7 +95,24 @@ module feature_Line_Buffer (
         end
     end
 
-    assign o_clr = (read_on && (o_addr==3'd0)) ? 1'b1 : 1'b0;
+    wire w_clr = (read_on && (o_addr==3'd0)) ? 1'b1 : 1'b0;
+
+    //clr masking
+    always @(posedge i_clk) begin
+        if (~i_rstn) begin
+            clr_masking     <= 1'b1;
+            clr_masking_d   <= 1'b0;
+        end 
+        else begin
+            clr_masking_d <= read_on;
+
+            // read_on이 1로 바뀌는 시점에서 1클럭 동안만 0
+            if (read_on && !clr_masking_d)
+                clr_masking <= 1'b0;
+            else
+                clr_masking <= 1'b1;
+        end
+    end
 
     always @(*) begin
         wrEn = 6'b0;
@@ -107,7 +126,7 @@ module feature_Line_Buffer (
     wire read_row_tail = read_on && (rdCnt == 10'd317) && (rdsubCnt == 3'd4);
 
     // ---------- fillNum driver update
-    wire fill_inc = (state_WRITE == WRITE_ON) && slave_transaction_on && (wDataCnt == 10'd319) && (fillNum != 3'd5);
+    wire fill_inc = (state_WRITE == WRITE_ON) && slave_transaction_on && (wDataCnt == 10'd319);
 
     wire fill_dec = (state_READ  == READ_ON) && read_row_tail && (fillNum != 3'd0);
 
@@ -162,7 +181,7 @@ module feature_Line_Buffer (
                             wDataCnt <= 10'd0;
                             WrNum    <= (WrNum == 3'd5) ? 3'd0 : (WrNum + 1);
                             if (WrLineNum != 9'd179) WrLineNum <= WrLineNum + 9'd1;
-                        end 
+                        end
                         else begin
                             wDataCnt <= wDataCnt + 10'd1;
                         end
@@ -220,7 +239,6 @@ module feature_Line_Buffer (
             rdYCnt          <= 9'd0;
             rdBase          <= 3'd0;
             rdsubCnt        <= 3'd0;
-            eof_delay_cnt   <= 2'd0;
 
         end 
         else begin
@@ -229,7 +247,6 @@ module feature_Line_Buffer (
                     read_on  <= 1'b0;
                     innerClr <= 1'b0;
                     rdsubCnt <= 3'd0;
-                    eof_delay_cnt   <= 2'd0;
                     if (fillNum == 3'd5) state_READ <= READ_ON;
                 end
 
@@ -245,7 +262,6 @@ module feature_Line_Buffer (
 
                             if (rdYCnt == 9'd179) begin
                                 state_READ <= READ_EOF_DELAY;
-                                eof_delay_cnt <= 2'd0;
                             end 
                             else begin
                                 rdYCnt <= rdYCnt + 9'd1;
@@ -261,17 +277,25 @@ module feature_Line_Buffer (
                     else begin
                         rdsubCnt <= rdsubCnt + 3'd1;
                     end
+
+                    if ((((fillNum < 3'd5) && i_backbuffer_prog_full) || ~i_backbuffer_s_ready) && (rdYCnt < 9'd178)) begin
+                        state_READ <= READ_BLOCK;
+                        read_on <= 1'b0;
+                    end
+                end
+
+                READ_BLOCK: begin
+                    read_on <= 1'b0;
+                    rdCnt <= 10'd1022;
+                    rdsubCnt <= 3'd0;
+                    if ((i_backbuffer_s_ready && ~i_backbuffer_prog_full) && (fillNum == 3'd5)) begin
+                        state_READ          <= READ_ON;
+                    end
                 end
 
                 READ_EOF_DELAY: begin
-                    read_on <= 1'b1;
-                    if (eof_delay_cnt == 2'd2) begin
-                        state_READ <= READ_CLR;
-                        eof_delay_cnt <= 2'd0;
-                    end
-                    else begin
-                        eof_delay_cnt <= eof_delay_cnt + 1;
-                    end
+                    read_on <= 1'b0;
+                    state_READ <= READ_CLR;
                 end
 
                 READ_CLR: begin
@@ -285,6 +309,22 @@ module feature_Line_Buffer (
         end
     end
 
+    //EOF CLR ORING
+    reg eof_extra_clr;
+    always @(posedge i_clk) begin
+        if (~i_rstn) begin
+            eof_extra_clr <= 1'b0;
+        end
+        else if (state_READ == READ_CLR) begin
+            eof_extra_clr <= 1'b1;
+        end
+        else begin
+            eof_extra_clr <= 1'b0;
+        end
+    end
+
+    assign o_clr = (w_clr & clr_masking) | eof_extra_clr;
+
     // ---------- 윈도우 순환 및 패딩 ----------
     wire [7:0] col0 = bramOut[(rdBase+0) % 6];
     wire [7:0] col1 = bramOut[(rdBase+1) % 6];
@@ -294,7 +334,7 @@ module feature_Line_Buffer (
 
     always @(posedge i_clk) begin
         case (pad_top)
-            2'd2: begin // Top 2 lines pad
+            2'd2: begin
                 case (pad_bot)
                     2'd0: data_packed <= {8'd0, 8'd0, col2, col3, col4};
                     2'd1: data_packed <= {8'd0, 8'd0, col2, col3, 8'd0};
@@ -303,7 +343,7 @@ module feature_Line_Buffer (
                 endcase
             end
 
-            2'd1: begin // Top 1 line pad
+            2'd1: begin
                 case (pad_bot)
                     2'd0: data_packed <= {8'd0, col1, col2, col3, col4};
                     2'd1: data_packed <= {8'd0, col1, col2, col3, 8'd0};
@@ -312,7 +352,7 @@ module feature_Line_Buffer (
                 endcase
             end
 
-            default: begin // No top padding
+            default: begin
                 case (pad_bot)
                     2'd0: data_packed <= {col0, col1, col2, col3, col4};
                     2'd1: data_packed <= {col0, col1, col2, col3, 8'd0};

@@ -62,6 +62,7 @@ module feature_fifo_generator_0 (
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
+  axis_data_count,
   axis_prog_full
 );
 
@@ -85,6 +86,7 @@ input wire m_axis_tready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 output wire [127 : 0] m_axis_tdata;
+output wire [12 : 0] axis_data_count;
 output wire axis_prog_full;
 
   fifo_generator_v13_2_7 #(
@@ -217,7 +219,7 @@ output wire axis_prog_full;
     .C_PRIM_FIFO_TYPE_WRCH("512x36"),
     .C_PRIM_FIFO_TYPE_RACH("512x36"),
     .C_PRIM_FIFO_TYPE_RDCH("1kx36"),
-    .C_PRIM_FIFO_TYPE_AXIS("1kx36"),
+    .C_PRIM_FIFO_TYPE_AXIS("4kx9"),
     .C_USE_ECC_WACH(0),
     .C_USE_ECC_WDCH(0),
     .C_USE_ECC_WRCH(0),
@@ -241,19 +243,19 @@ output wire axis_prog_full;
     .C_WR_DEPTH_WRCH(16),
     .C_WR_DEPTH_RACH(16),
     .C_WR_DEPTH_RDCH(1024),
-    .C_WR_DEPTH_AXIS(1024),
+    .C_WR_DEPTH_AXIS(4096),
     .C_WR_PNTR_WIDTH_WACH(4),
     .C_WR_PNTR_WIDTH_WDCH(10),
     .C_WR_PNTR_WIDTH_WRCH(4),
     .C_WR_PNTR_WIDTH_RACH(4),
     .C_WR_PNTR_WIDTH_RDCH(10),
-    .C_WR_PNTR_WIDTH_AXIS(10),
+    .C_WR_PNTR_WIDTH_AXIS(12),
     .C_HAS_DATA_COUNTS_WACH(0),
     .C_HAS_DATA_COUNTS_WDCH(0),
     .C_HAS_DATA_COUNTS_WRCH(0),
     .C_HAS_DATA_COUNTS_RACH(0),
     .C_HAS_DATA_COUNTS_RDCH(0),
-    .C_HAS_DATA_COUNTS_AXIS(0),
+    .C_HAS_DATA_COUNTS_AXIS(1),
     .C_HAS_PROG_FLAGS_WACH(0),
     .C_HAS_PROG_FLAGS_WDCH(0),
     .C_HAS_PROG_FLAGS_WRCH(0),
@@ -283,7 +285,7 @@ output wire axis_prog_full;
     .C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH(14),
     .C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH(14),
     .C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH(1022),
-    .C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS(1022),
+    .C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS(4094),
     .C_REG_SLICE_MODE_WACH(0),
     .C_REG_SLICE_MODE_WDCH(0),
     .C_REG_SLICE_MODE_WRCH(0),
@@ -511,9 +513,9 @@ output wire axis_prog_full;
     .axi_r_prog_empty(),
     .axis_injectsbiterr(1'D0),
     .axis_injectdbiterr(1'D0),
-    .axis_prog_full_thresh(10'B0),
-    .axis_prog_empty_thresh(10'B0),
-    .axis_data_count(),
+    .axis_prog_full_thresh(12'B0),
+    .axis_prog_empty_thresh(12'B0),
+    .axis_data_count(axis_data_count),
     .axis_wr_data_count(),
     .axis_rd_data_count(),
     .axis_sbiterr(),

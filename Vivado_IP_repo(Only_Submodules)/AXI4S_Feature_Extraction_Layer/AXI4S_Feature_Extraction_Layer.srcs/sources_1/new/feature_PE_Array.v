@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //2025.09.18
 module feature_PE_Array #(
     parameter REQUANT = 10'd171,
 
@@ -162,6 +162,18 @@ module feature_PE_Array #(
         end
     end
 
+    //2025.09.16 Debugging
+    reg remove_first_pe_valid;
+
+    always @(posedge i_clk) begin
+        if (~i_rstn) begin
+            remove_first_pe_valid <= 0;
+        end
+        else if (valid_dealy[3]) begin
+            remove_first_pe_valid <= 1;
+        end
+    end
+
     always @(posedge i_clk) begin
         if (~i_rstn) begin
             first_valid_mask <= 1'b0;
@@ -169,12 +181,32 @@ module feature_PE_Array #(
         else if ((i_state_read == 3'd0) && valid_dealy[4]) begin
             first_valid_mask <= 1'b0;
         end 
-        else if (valid_dealy[4]) begin
+        else if (valid_dealy[3]) begin //2025.09.17 Debugging
             first_valid_mask <= 1'b1;
         end
     end
 
-    assign o_pe_valid = valid_dealy[3] && first_valid_mask;
+    //2025.09.18 Debugging: orgating
+    reg extra_first_valid_mask;
+
+    always @(posedge i_clk) begin
+        if (~i_rstn) begin
+            extra_first_valid_mask <= 1'b0;
+        end
+        else if ((i_state_read == 3'd0) && valid_dealy[4]) begin
+            extra_first_valid_mask <= 1'b1;
+        end
+        else if ((i_state_read == 3'd0) && valid_dealy[3]) begin
+            extra_first_valid_mask <= 1'b0;
+        end
+        else if (i_state_read == 3'd1) begin //2025.09.18 12:50
+            extra_first_valid_mask <= 1'b0;
+        end
+    end
+    
+    wire w_pe_valid = valid_dealy[3] && (first_valid_mask || extra_first_valid_mask);
+
+    assign o_pe_valid = remove_first_pe_valid && w_pe_valid;
 
     ////////////////////// PE INSTANCE /////////////////////////
 

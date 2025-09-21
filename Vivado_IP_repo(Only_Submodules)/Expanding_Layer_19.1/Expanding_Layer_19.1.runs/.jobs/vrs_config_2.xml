@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="xbip_dsp48_macro_0_synth_1" LaunchDir="D:/FSRCNN/ip_repo/Expanding_Layer_19.1/Expanding_Layer_19.1.runs/xbip_dsp48_macro_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-

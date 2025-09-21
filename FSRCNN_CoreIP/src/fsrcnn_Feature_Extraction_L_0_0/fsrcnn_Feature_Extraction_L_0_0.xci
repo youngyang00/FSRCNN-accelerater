@@ -4,7 +4,7 @@
     "xci_name": "fsrcnn_Feature_Extraction_L_0_0",
     "cell_name": "Feature_Extraction_L_0",
     "component_reference": "xilinx.com:user:Feature_Extraction_Layer:1.0",
-    "ip_revision": "8",
+    "ip_revision": "21",
     "gen_directory": "../../../../../fsrcnn_coreip/ip_repo/fsrcnn_coreip/tmp_edit_project.gen/sources_1/ip/fsrcnn_Feature_Extraction_L_0_0",
     "parameters": {
       "component_parameters": {
@@ -27,7 +27,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "8" } ],
+        "IPREVISION": [ { "value": "21" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../fsrcnn_coreip/ip_repo/fsrcnn_coreip/tmp_edit_project.gen/sources_1/ip/fsrcnn_Feature_Extraction_L_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

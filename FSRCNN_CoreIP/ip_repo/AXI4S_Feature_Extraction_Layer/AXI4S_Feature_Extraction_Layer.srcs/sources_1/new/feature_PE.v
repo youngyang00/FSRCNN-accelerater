@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //2025.09.13
 module feature_PE#(
     parameter REQUANT = 10'd171,
     parameter [39:0] WEIGHT0 = 40'h36807F8035,

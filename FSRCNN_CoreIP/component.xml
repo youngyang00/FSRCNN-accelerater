@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>GwangSeon_Sin</spirit:vendor>
+  <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>axi4s_fsrcnn_upscaler</spirit:name>
   <spirit:version>1.0</spirit:version>
@@ -109,7 +109,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_ACLK.ASSOCIATED_BUSIF">M_AXIS:S_AXIS</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_ACLK.ASSOCIATED_BUSIF">S_AXIS:M_AXIS</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -130,9 +130,6 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_AXIS_Y_Converter_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_AXIS_Shrinking_Layer_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -145,12 +142,15 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_deconv_top_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8fc815f2</spirit:value>
+            <spirit:value>27c62380</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -162,9 +162,6 @@
         <spirit:modelName>fsrcnn_wrapper</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_AXIS_Y_Converter_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_AXIS_Shrinking_Layer_1_0__ref_view_fileset</spirit:localName>
@@ -179,12 +176,15 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_deconv_top_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>69ce2df2</spirit:value>
+            <spirit:value>f35c45bc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -361,11 +361,28 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/fsrcnn_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:name>src/fsrcnn_AXIS_Y_Converter_0_0/fsrcnn_AXIS_Y_Converter_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>SCOPED_TO_REF_fsrcnn</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Y_Converter_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fsrcnn_AXIS_Shrinking_Layer_0_0/fsrcnn_AXIS_Shrinking_Layer_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Shrinking_Layer_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/AxiMappingLayer_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fsrcnn_AXIS_Expanding_Layer_0_0/fsrcnn_AXIS_Expanding_Layer_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Expanding_Layer_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/fsrcnn_deconv_top_0_0/fsrcnn_deconv_top_0_0.xci</spirit:name>
@@ -380,38 +397,21 @@
         <spirit:userFileType>CELL_NAME_fsrcnn_i/Feature_Extraction_L_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/AxiMappingLayer_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_AXIS_Y_Converter_0_0/fsrcnn_AXIS_Y_Converter_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Y_Converter_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_AXIS_Shrinking_Layer_0_0/fsrcnn_AXIS_Shrinking_Layer_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Shrinking_Layer_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_AXIS_Expanding_Layer_0_0/fsrcnn_AXIS_Expanding_Layer_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Expanding_Layer_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/fsrcnn.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>src/fsrcnn_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_fsrcnn</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>src/fsrcnn_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2c0d7567</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_7ea990fc</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -420,16 +420,6 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="AXIS_Y_Converter" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="Feature_Extraction_Layer" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -476,25 +466,17 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="Feature_Extraction_Layer" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_deconv_top_0_0/fsrcnn_deconv_top_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/deconv_top_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_Feature_Extraction_L_0_0/fsrcnn_Feature_Extraction_L_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/Feature_Extraction_L_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_fsrcnn_i/AxiMappingLayer_0</spirit:userFileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>src/fsrcnn_AXIS_Y_Converter_0_0/fsrcnn_AXIS_Y_Converter_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
@@ -508,10 +490,33 @@
         <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Shrinking_Layer_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>src/fsrcnn_AxiMappingLayer_0_0/fsrcnn_AxiMappingLayer_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/AxiMappingLayer_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>src/fsrcnn_AXIS_Expanding_Layer_0_0/fsrcnn_AXIS_Expanding_Layer_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_fsrcnn_i/AXIS_Expanding_Layer_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fsrcnn_deconv_top_0_0/fsrcnn_deconv_top_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/deconv_top_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/fsrcnn_Feature_Extraction_L_0_0/fsrcnn_Feature_Extraction_L_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fsrcnn_i/Feature_Extraction_L_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/fsrcnn.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/fsrcnn_wrapper.v</spirit:name>
@@ -524,16 +529,6 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="AXIS_Y_Converter" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="Feature_Extraction_Layer" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -580,6 +575,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_Feature_Extraction_Layer_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="Feature_Extraction_Layer" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>xgui/axi4s_fsrcnn_upscaler_v1_0.tcl</spirit:name>
@@ -611,13 +616,13 @@
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
       <xilinx:vendorURL>https://github.com/youngyang00/FSRCNN-accelerater</xilinx:vendorURL>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-17T15:27:02Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-09-21T03:22:02Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f498ac17"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c058ba7e"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="ad6b26a1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bf993727"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c77e2b93"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="4757ec2a"/>
     </xilinx:packagingInfo>

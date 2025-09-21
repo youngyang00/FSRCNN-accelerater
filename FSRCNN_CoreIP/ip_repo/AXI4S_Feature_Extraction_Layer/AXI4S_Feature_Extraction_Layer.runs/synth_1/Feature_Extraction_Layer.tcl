@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/synth_1/Feature_Extraction_Layer.tcl"
+  variable script "C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/synth_1/Feature_Extraction_Layer.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu9eg-ffvb1156-2-e
 
@@ -77,35 +78,37 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/wt [current_project]
-set_property parent.project_path C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr [current_project]
+set_property webtalk.parent_dir C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/wt [current_project]
+set_property parent.project_path C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu102:part0:3.4 [current_project]
-set_property ip_output_repo c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/ip [current_project]
+set_property ip_repo_paths c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer [current_project]
+update_ip_catalog
+set_property ip_output_repo c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v
-  C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v
-  C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v
-  C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v
-  C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v
+  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_Line_Buffer.v
+  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE.v
+  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_PE_Array.v
+  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/feature_rom_40_ff_async.v
+  C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/new/Feature_Extraction_Layer.v
 }
-read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci
-set_property used_in_implementation false [get_files -all c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0_ooc.xdc]
+read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0.xci
+set_property used_in_implementation false [get_files -all c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_dsp_macro_0/feature_dsp_macro_0_ooc.xdc]
 
-read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci
-set_property used_in_implementation false [get_files -all c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant_ooc.xdc]
+read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant.xci
+set_property used_in_implementation false [get_files -all c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_dsp_Requant/feature_dsp_Requant_ooc.xdc]
 
-read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_blk_mem_gen_0/feature_blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci
-set_property used_in_implementation false [get_files -all c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xdc]
-set_property used_in_implementation false [get_files -all c:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0_ooc.xdc]
+read_ip -quiet C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0.xdc]
+set_property used_in_implementation false [get_files -all c:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.gen/sources_1/ip/feature_fifo_generator_0/feature_fifo_generator_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -116,10 +119,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/submit/AXI4S_Feature_Extraction_Layer/constraints.xdc
-set_property used_in_implementation false [get_files C:/submit/AXI4S_Feature_Extraction_Layer/constraints.xdc]
+read_xdc C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/constraints.xdc
+set_property used_in_implementation false [get_files C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.srcs/utils_1/imports/synth_1/Feature_Extraction_Layer.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

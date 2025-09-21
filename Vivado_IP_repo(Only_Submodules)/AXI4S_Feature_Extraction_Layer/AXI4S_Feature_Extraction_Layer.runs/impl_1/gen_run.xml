@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1757038026">
+<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1757653195">
   <File Type="ROUTE-PWR" Name="Feature_Extraction_Layer_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Feature_Extraction_Layer.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="Feature_Extraction_Layer_power_summary_routed.pb"/>
@@ -17,7 +17,6 @@
   <File Type="BITSTR-MMI" Name="Feature_Extraction_Layer.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Feature_Extraction_Layer_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="Feature_Extraction_Layer.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Feature_Extraction_Layer_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="Feature_Extraction_Layer.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -26,11 +25,8 @@
   <File Type="PLACE-IO" Name="Feature_Extraction_Layer_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Feature_Extraction_Layer_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Feature_Extraction_Layer_utilization_placed.pb"/>
-  <File Type="ROUTE-RQS" Name="Feature_Extraction_Layer_routed.rqs"/>
   <File Type="PLACE-CTRL" Name="Feature_Extraction_Layer_control_sets_placed.rpt"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Feature_Extraction_Layer_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-DRC" Name="Feature_Extraction_Layer_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Feature_Extraction_Layer_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Feature_Extraction_Layer_power_routed.rpx"/>
@@ -52,6 +48,7 @@
   <File Type="PHYSOPT-DCP" Name="Feature_Extraction_Layer_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Feature_Extraction_Layer_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Feature_Extraction_Layer_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Feature_Extraction_Layer_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="Feature_Extraction_Layer_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Feature_Extraction_Layer_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="Feature_Extraction_Layer.pdi"/>
@@ -60,7 +57,10 @@
   <File Type="RNPI_FILE" Name="Feature_Extraction_Layer.rnpi"/>
   <File Type="NPI_FILE" Name="Feature_Extraction_Layer.npi"/>
   <File Type="RBD_FILE" Name="Feature_Extraction_Layer.rbd"/>
+  <File Type="ROUTE-RQS" Name="Feature_Extraction_Layer_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="Feature_Extraction_Layer_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/feature_Line_Buffer.v">
@@ -98,6 +98,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../axi4s_feature_extraction_layer/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Feature_Extraction_Layer"/>
@@ -118,6 +121,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Feature_Extraction_Layer.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

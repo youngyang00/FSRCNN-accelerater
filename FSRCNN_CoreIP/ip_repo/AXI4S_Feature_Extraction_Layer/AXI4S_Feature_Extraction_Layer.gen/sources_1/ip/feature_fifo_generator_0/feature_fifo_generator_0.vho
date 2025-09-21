@@ -61,6 +61,7 @@ COMPONENT feature_fifo_generator_0
     m_axis_tvalid : OUT STD_LOGIC;
     m_axis_tready : IN STD_LOGIC;
     m_axis_tdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
+    axis_data_count : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     axis_prog_full : OUT STD_LOGIC 
   );
 END COMPONENT;
@@ -80,6 +81,7 @@ your_instance_name : feature_fifo_generator_0
     m_axis_tvalid => m_axis_tvalid,
     m_axis_tready => m_axis_tready,
     m_axis_tdata => m_axis_tdata,
+    axis_data_count => axis_data_count,
     axis_prog_full => axis_prog_full
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

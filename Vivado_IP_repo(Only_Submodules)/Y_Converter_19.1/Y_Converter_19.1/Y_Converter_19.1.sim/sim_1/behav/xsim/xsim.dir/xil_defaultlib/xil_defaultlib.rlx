@@ -1,8 +1,0 @@
-0.6
-2019.1
-May 24 2019
-15:06:07
-C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.srcs/sources_1/imports/Desktop/Y_Converter.v,1757108958,verilog,,,,Y_Converter,,,,,,,,
-C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.srcs/sources_1/imports/Desktop/yconv_pipelined_multiplier_2stage.v,1757108432,verilog,,C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.srcs/sources_1/imports/Desktop/Y_Converter.v,,yconv_pipelined_multiplier_2stage,,,,,,,,
-C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.srcs/sources_1/ip/yconv_fifo_generator_0/sim/yconv_fifo_generator_0.v,1757108913,verilog,,C:/Users/josuh/Desktop/Projects/Capstone/Y_Converter_19.1/Y_Converter_19.1.srcs/sources_1/imports/Desktop/yconv_pipelined_multiplier_2stage.v,,yconv_fifo_generator_0,,,,,,,,

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/submit/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/feature_fifo_generator_0_synth_1'
+HD_PWD='C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.runs/feature_fifo_generator_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

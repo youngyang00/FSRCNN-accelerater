@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Sep 12 23:33:16 2025
+# Process ID: 21472
+# Current directory: D:/FSRCNN_imple2/ip_repo/AXIS_Y_Converter_v19.1_0910
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3136 D:\FSRCNN_imple2\ip_repo\AXIS_Y_Converter_v19.1_0910\AXIS_Y_Converter_v19.1_0910.xpr
+# Log file: D:/FSRCNN_imple2/ip_repo/AXIS_Y_Converter_v19.1_0910/vivado.log
+# Journal file: D:/FSRCNN_imple2/ip_repo/AXIS_Y_Converter_v19.1_0910\vivado.jou
+# Running On: DESKTOP-DD0PJLS, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17103 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/FSRCNN_imple2/ip_repo/AXIS_Y_Converter_v19.1_0910/AXIS_Y_Converter_v19.1_0910.xpr
+update_compile_order -fileset sources_1

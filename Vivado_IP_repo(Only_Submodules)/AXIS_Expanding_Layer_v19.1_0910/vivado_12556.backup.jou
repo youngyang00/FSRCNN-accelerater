@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Sep 10 13:33:52 2025
+# Process ID: 12556
+# Current directory: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25416 D:\Github_Portfolio\AXIS_IPs_v19.1_for_Integration\AXIS_Expanding_Layer_v19.1_0910\AXIS_Expanding_Layer_v19.1_0910.xpr
+# Log file: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910/vivado.log
+# Journal file: D:/Github_Portfolio/AXIS_IPs_v19.1_for_Integration/AXIS_Expanding_Layer_v19.1_0910\vivado.jou
+# Running On: DESKTOP-INFKKCG, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16930 MB
+#-----------------------------------------------------------
+start_gui

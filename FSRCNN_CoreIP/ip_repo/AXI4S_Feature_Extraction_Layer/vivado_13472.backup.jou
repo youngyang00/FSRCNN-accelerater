@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Sep 12 13:51:13 2025
+# Process ID: 13472
+# Current directory: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13668 C:\emergency\FSRCNN_imple2.vol1\ip_repo\AXI4S_Feature_Extraction_Layer\AXI4S_Feature_Extraction_Layer.xpr
+# Log file: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/vivado.log
+# Journal file: C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer\vivado.jou
+# Running On: xylo, OS: Windows, CPU Frequency: 4350 MHz, CPU Physical cores: 12, Host memory: 33382 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/emergency/FSRCNN_imple2.vol1/ip_repo/AXI4S_Feature_Extraction_Layer/AXI4S_Feature_Extraction_Layer.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {C:\emergency\FSRCNN_imple2.vol1\ip_repo\axi4s_feature_extraction_layer\component.xml}
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 9 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+close_design
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 10 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/emergency/FSRCNN_imple2.vol1/ip_repo/axi4s_feature_extraction_layer
